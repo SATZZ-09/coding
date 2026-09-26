@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Debugging Block Inline - Satria Putra Anugrah</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <h1 style="color: #0b3c5d;">
+        Uji Coba Block & Inline Satria Putra Anugrah - X PPLG
+    </h1>
+    <hr>
+
+    <!-- Kesalahan 1: span digunakan untuk ukuran width dan height -->
+    <p>
+        Status Kelulusan:
+    </p>
+    <div style="
+        width: 250px;
+        height: 100px;
+        background-color: #dcfce7;
+        color: #166534;
+    ">
+        LULUS SELEKSI
+    </div>
+
+    <!-- Kesalahan 2: span membungkus elemen block -->
+    <div style="border: 2px dashed #0284c7; padding: 10px;">
+        <h3>Catatan Penting</h3>
+        <p>Elemen block tidak boleh dibungkus di dalam elemen inline.</p>
+    </div>
+
+    <!-- Kesalahan 3: div digunakan di tengah kalimat -->
+    <p>
+        Jurusan PPLG mendidik siswa menjadi
+        <span style="color: blue;">Web Developer</span>
+        dan
+        <span style="color: green;">Mobile Developer</span>
+        yang handal.
+    </p>
+
+    <hr>
+
+    <p style="text-align: right;">
+        &copy; 2026 Satria Putra Anugrah - X PPLG SMKN 4 Kuningan
+    </p>
+
+</body>
+</html>
