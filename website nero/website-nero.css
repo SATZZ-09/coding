@@ -125,7 +125,6 @@ nav li {
     margin-bottom: 40px;
 }
 
-/* Tempat kumpulan card */
 .guru-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
