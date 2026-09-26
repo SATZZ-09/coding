@@ -3,103 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile siswa</title>
+    <title>Profile Siswa</title>
 
     <meta name="description"
         content="Website portofolio resmi Satria Putra Anugrah siswa XI PPLG 2 SMKN 4 KUNINGAN.">
-        <meta name="author" content="Satria Putra Anugrah">
+    <meta name="author" content="Satria Putra Anugrah">
 
-        <link rel="icon" type="image/png" sizes="32x32"
-            href="https://www.smkn4kuningan.sch.id/favicon-32x32.png">
-            
-            <link rel="icon" type="image/png" sizes="16x16"
-                href="https://www.smkn4kuningan.sch.id/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://www.smkn4kuningan.sch.id/favicon-32x32.png">
 
-        <style>
-            body {
-                background-color:#f1f5f9;
-                color: #333;
-                margin: 20px;
-            }
-        </style>        
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://www.smkn4kuningan.sch.id/favicon-16x16.png">
+
+    <style>
+        body {
+            background-color: #f1f5f9;
+            color: #333;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a73e8;
+        }
+
+        a {
+            color: #0b3c5d;
+            text-decoration: none;
+        }
+
+        /* KOTAK PROFIL */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            border: 1px solid #ddd;
+
+            /* Animasi */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efek kotak saat diarahkan kursor */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Foto profil */
+        .foto-profil {
+            width: 150px;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: right;
+        }
+    </style>
 </head>
+
 <body id="top">
+
     <!-- BAGIAN HEADER -->
-    <h1 style="text-align: center; color: #1a73e8;">
-    PROFIL SISWA
-</h1>
-<hr>
-<!-- BAGIAN NAVIGASI -->
-<ul>
-    <li>
-        <a href="beranda.html" style="color: #0b3c5d; text-decoration: none;">Kembali ke beranda</a>
-    </li>
-</ul>
-<hr>
+    <h1>PROFIL SISWA</h1>
 
-<!-- BAGIAN DATA DIRI -->
-<h2>Data Diri</h2>
-<picture>
-    <source media="(min-width: 600px)" srcset="foto-profil.jpg">
-    <img src="foto-profil-kecil.jpg" alt="Foto profile" style="width: 150px; height: auto;">
-</picture>
+    <hr>
 
-<p style="background-color: #f1f3f4;">
-    <b>&#128100; Nama:</b> SATRIA PUTRA ANUGRAH
-    <br>
-    <b>&#128197; Kelas:</b> XI PPLG 2
-    <br>
-    <b>&#128203; Sekolah:</b> SMKN 4 KUNINGAN
-    <br>
-    <b>&#128204; Jurusan</b> Pengembangan perangkat lunak dan gim
-</p>
+    <!-- BAGIAN NAVIGASI -->
+    <ul>
+        <li>
+            <a href="beranda.html">Kembali ke beranda</a>
+        </li>
+    </ul>
 
-<hr>
-<!-- BAGIAN UTAMA KONTEN -->
-<h3>Hobi dan minat</h3>
+    <hr>
 
-<ul>
-    <li>&#128176; Belajar coding</li>
-    <li>&#128177; Membuat website</li>
-    <li>&#128178; Belajar Teknologi</li>
-</ul>
+    <!-- BAGIAN DATA DIRI -->
+    <div class="card">
+        <h2>Data Diri</h2>
 
-<h2>&#128075; Profil Saya</h2>
+        <picture>
+            <source media="(min-width: 600px)" srcset="foto-profil.jpg">
+            <img src="foto-profil-kecil.jpg"
+                alt="Foto profile"
+                class="foto-profil">
+        </picture>
 
-<p><b>NAMA SAYA:</b> SATRIA PUTRA ANUGRAH</p>
-<p><b>KELAS:</b> XI PPLG 2</p>
+        <p>
+            <b>&#128100; Nama:</b> SATRIA PUTRA ANUGRAH
+            <br>
+            <b>&#128197; Kelas:</b> XI PPLG 2
+            <br>
+            <b>&#128203; Sekolah:</b> SMKN 4 KUNINGAN
+            <br>
+            <b>&#128204; Jurusan:</b> Pengembangan perangkat lunak dan gim
+        </p>
+    </div>
 
-<p>
-    saya sedang mempelajari pengolahan data dan pemrograman website. 
-    <var>$totalNilai</var> menggunakan bahasa pemrograman <code>PHP</code>
-</p>
-<!-- BAGIAN TUJUAN BELAJAR -->
-<h3>&#11088; Tujuan Belajar</h3>
+    <!-- BAGIAN HOBI -->
+    <div class="card">
+        <h3>Hobi dan Minat</h3>
 
-<p>
-    Saya ingin meningkatkan kemampuan di bidang saya
-    <i>pemrograman website</i> dan membuat project yang bermanfaat
-</p>
+        <ul>
+            <li>&#128176; Belajar coding</li>
+            <li>&#128177; Membuat website</li>
+            <li>&#128178; Belajar Teknologi</li>
+        </ul>
+    </div>
 
-<hr>
+    <!-- BAGIAN PROFIL -->
+    <div class="card">
+        <h2>&#128075; Profil Saya</h2>
 
-<!-- BAGIAN CONTACT -->
-<h3>&#9742; Hubungi Saya</h3>
+        <p>
+            <b>NAMA SAYA:</b> SATRIA PUTRA ANUGRAH
+        </p>
 
-<ul>
-    <li>Gmail Saya:<a href="mailto:putraanugrahsatria735@gmail.com">putraanugrahsatria735@gmail.com</a></li>
-    <li>No Saya:<a href="tel:081224496252"> 081224496252</a></li>
-</ul>
+        <p>
+            <b>KELAS:</b> XI PPLG 2
+        </p>
 
-<p>
-    <a href="beranda.html" style="color: #0b3c5d; text-decoration: none;">beranda</a>
-</p>
+        <p>
+            Saya sedang mempelajari pengolahan data dan pemrograman website.
+            <var>$totalNilai</var> menggunakan bahasa pemrograman
+            <code>PHP</code>.
+        </p>
+    </div>
 
-<hr>
-<!-- BAGIAN FOOTER -->
-<p style="text-align: right;">
-    &copy; 2026 Dibuat oleh SATRIA PUTRA ANUGRAH KELAS XI PPLG 2
-</p>
+    <!-- BAGIAN TUJUAN BELAJAR -->
+    <div class="card">
+        <h3>&#11088; Tujuan Belajar</h3>
+
+        <p>
+            Saya ingin meningkatkan kemampuan di bidang saya
+            <i>pemrograman website</i> dan membuat project yang bermanfaat.
+        </p>
+    </div>
+
+    <hr>
+
+    <!-- BAGIAN CONTACT -->
+    <div class="card">
+        <h3>&#9742; Hubungi Saya</h3>
+
+        <ul>
+            <li>
+                Gmail Saya:
+                <a href="mailto:putraanugrahsatria735@gmail.com">
+                    putraanugrahsatria735@gmail.com
+                </a>
+            </li>
+
+            <li>
+                No Saya:
+                <a href="tel:081224496252">
+                    081224496252
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <p>
+        <a href="beranda.html">Beranda</a>
+    </p>
+
+    <hr>
+
+    <!-- BAGIAN FOOTER -->
+    <p class="footer">
+        &copy; 2026 Dibuat oleh SATRIA PUTRA ANUGRAH KELAS XI PPLG 2
+    </p>
 
 </body>
 </html>

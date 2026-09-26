@@ -3,25 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda Portofolio</title>
+
+    <title>Beranda Portofolio - Satria Putra Anugrah | XI PPLG</title>
 
     <meta name="description"
-        content="Website portofolio resmi Satria Putra Anugrah siswa XI PPLG 2 SMKN 4 KUNINGAN.">
-        <meta name="author" content="Satria Putra Anugrah">
+        content="Website portofolio resmi Satria Putra Anugrah siswa XI PPLG 2 SMKN 4 Kuningan.">
+    <meta name="author" content="Satria Putra Anugrah">
 
-        <link rel="icon" type="image/png" sizes="32x32"
-            href="https://www.smkn4kuningan.sch.id/favicon-32x32.png">
-            
-            <link rel="icon" type="image/png" sizes="16x16"
-                href="https://www.smkn4kuningan.sch.id/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://www.smkn4kuningan.sch.id/favicon-32x32.png">
 
-        <style>
-            body {
-                background-color: #f1f5f9;
-                color: #333;
-                margin: 20px;
-            }
-        </style>        
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://www.smkn4kuningan.sch.id/favicon-16x16.png">
+
+    <style>
+        body {
+            background-color: #f1f5f9;
+            color: #333;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: white;
+        border-radius: 12px;
+
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .highlight {
+        background-color: #fff3cd;
+        color: #1a73e8;
+        padding: 3px 6px;
+        border-radius: 5px;
+        font-weight: bold;
+        }
+
+    .badge {
+        background-color: #e3f2fd;
+        color: #1565c0;
+        padding: 4px 8px;
+        border-radius: 10px;
+        font-weight: bold;
+        }
+
+    .keyword {
+        color: #d63384;
+        font-weight: bold;
+    }
+    </style>
 </head>
 
 <body id="top">
@@ -31,144 +69,189 @@
         <a href="https://smkn4kuningan.sch.id" target="_blank">
             <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-QwSTyiqAFYREpajq7vtpYxCvIY4Ld6sYv-0xsaN-lg&s=10"
-                alt="Logo SMKN 4 KUNINGAN"
+                alt="Logo SMKN 4 Kuningan"
                 style="width: 140px; height: auto;">
         </a>
     </div>
 
     <!-- HEADER -->
-    <h1 style="text-align: center; color: #1a73e8;">
-        <span style="font-size: 32px; vertical-align: middle;">&#128075;</span> PORTAL SISWA SATRIA PUTRA ANUGRAH
-    </h1>
+    <div class="card">
+        <h1 style="text-align: center; color: #1a73e8;">
+            <span style="font-size: 32px;">&#128075;</span>
+            PORTAL SISWA SATRIA PUTRA ANUGRAH
+        </h1>
+
+        <p style="text-align: center;">
+            Selamat datang di website portofolio saya.
+        </p>
+    </div>
 
     <hr>
 
     <!-- NAVIGASI -->
-    <ul>
-        <li>
-            <a href="profil.html">
-                Profile Saya
-            </a>
-        </li>
+    <div class="card">
+        <h2>Menu Navigasi</h2>
 
-        <li>
-            <a href="https://github.com/SATZZ-09/coding.git" target="_blank">
-                Github
-            </a>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <a href="profil.html">Profile Saya</a>
+            </li>
 
-    <hr>
+            <li>
+                <a href="https://github.com/SATZZ-09/coding.git" target="_blank">
+                    Github
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <!-- DATA SISWA -->
-    <p>
-        &#128100;<b>NAMA</b>: <b>SATRIA PUTRA ANUGRAH</b>
-    </p>
+    <div class="card">
+        <h2>&#128100; Data Siswa</h2>
 
-    <p>
-        &#128197;<b>KELAS</b>: <b>11 PPLG 2</b>
-    </p>
+        <p>
+            <b>NAMA:</b>
+            <span class="highlight">SATRIA PUTRA ANUGRAH</span>
+        </p>
+
+        <p>
+            <b>KELAS:</b>
+            <span class="badge">XI PPLG 2</span>
+        </p>
+
+        <p>
+            <b>SEKOLAH:</b>
+            <span class="keyword">SMKN 4 KUNINGAN</span>
+        </p>
+    </div>
 
     <!-- KONTEN UTAMA -->
-    <h2>&#127979; Pengalaman Belajar PPLG</h2>
+    <div class="card">
+        <h2>&#127979; Pengalaman Belajar PPLG</h2>
 
-    <p>
-        Saya belajar di jurusan
-        <b>PPLG SMKN 4 KUNINGAN</b>.
-        Selama saya belajar, saya mempelajari berbagai materi
-        tentang pemrograman dan pembuatan website.
-    </p>
+        <p>
+            Saya belajar di jurusan
+            <span class="highlight">PPLG SMKN 4 KUNINGAN</span>.
+            Selama saya belajar, saya mempelajari berbagai materi
+            tentang pemrograman dan pembuatan website.
+        </p>
 
-    <p>
-        Saya merasa senang karena dapat belajar hal baru dalam dunia teknologi.
-        <i>Belajar HTML</i> membantu saya memahami cara membuat struktur
-        halaman website.
-    </p>
+        <p>
+            Saya merasa senang karena dapat belajar hal baru dalam dunia
+            teknologi. <span class="badge">Belajar HTML</span> membantu
+            saya memahami cara membuat struktur halaman website.
+        </p>
 
-    <p>
-        Saya ingin terus meningkatkan kemampuan coding saya.
-    </p>
-
-    <hr>
+        <p>
+            Saya ingin terus meningkatkan kemampuan
+            <span class="keyword">coding</span> saya.
+        </p>
+    </div>
 
     <!-- RINGKASAN MATERI -->
-    <h2>&#128218;Ringkasan Materi</h2>
+    <div class="card">
+        <h2>&#128218; Ringkasan Materi</h2>
 
-    <p>
-        Pada materi HTML, kita mempelajari berbagai tag untuk membuat
-        struktur sebuah halaman web.
-    </p>
+        <p>
+            Pada materi HTML, kita mempelajari berbagai tag untuk membuat
+            struktur sebuah halaman web.
+        </p>
 
-    <p>
-        Salah satu materi yang dipelajari adalah penggunaan elemen
-        <code>&lt;img&gt;</code> untuk menampilkan gambar pada halaman website.
-    </p>
+        <p>
+            Salah satu materi yang dipelajari adalah penggunaan elemen
+            <code>&lt;img&gt;</code> untuk menampilkan gambar pada halaman website.
+        </p>
 
-    <p>
-        HTML digunakan untuk membuat struktur halaman, sedangkan CSS
-        digunakan untuk mengatur tampilan agar halaman menjadi lebih menarik
-        dan rapi.
-    </p>
-
-    <hr>
+        <p>
+            <span class="highlight">HTML</span> digunakan untuk membuat struktur
+            halaman, sedangkan <span class="badge">CSS</span> digunakan untuk
+            mengatur tampilan agar halaman menjadi lebih menarik dan rapi.
+        </p>
+    </div>
 
     <!-- AGENDA -->
-    <h3 id="info-kegiatan">
-        &#128187; Agenda Belajar Lab
-    </h3>
+    <div class="card">
+        <h3 id="info-kegiatan">
+            &#128187; Agenda Belajar Lab
+        </h3>
 
-    <ol>
-        <li>Heading dan Paragraf</li>
-        <li>HTML list dan link</li>
-        <li>Style dan HEX Color</li>
-    </ol>
+        <ol>
+            <li>Heading dan Paragraf</li>
+            <li>HTML list dan link</li>
+            <li>Style dan HEX Color</li>
+        </ol>
+    </div>
 
-    <hr>
+    <!-- PANDUAN -->
+    <div class="card">
+        <h3>&#128640; Panduan Pintasan dan Struktur Kode</h3>
 
-    <h3>&#128640;Panduan Pintasan dan struktur kode</h3>
-    
-    <h3>Pintasan keyboard VS code</h3>
-    <p>Untuk mencari membuka Command Palette, tekan <kbd style="border: 1px solid #999; padding: 2px 6px; background-color: #F5F5DC;">CTRL</kbd> + <kbd style="border: 1px solid #999; padding: 2px 6px; background-color: #F5F5DC;">shift</kbd>+<kbd style="border: 1px solid #999; padding: 2px 6px; background-color: #F5F5DC;">P</kbd> Pada keyboard</p>
-    <p>Untuk menyimpan dokumen <kbd style="border: 1px solid #999; padding: 2px 6px; background-color: #F5F5DC;">CTRL</kbd> + <kbd style="border: 1px solid #999; padding: 2px 6px; background-color: #F5F5DC;">S</kbd> Pada Keyboard</p>
-    <p>Untuk membuka file <kbd style="border: 1px solid #999; padding: 2px 6px; background-color: #F5F5DC;">CTRL</kbd> + <kbd style="border: 1px solid #999; padding: 2px 6px; background-color: #F5F5DC;">P</kbd> Pada Keyboard</p>
+        <h3>Pintasan Keyboard VS Code</h3>
 
-    <h4>&#11088; Struktur Dasar HTML</h4>
-    <pre style="background-color: #222; padding: 20px; color: white;">
-    <code>&lt;!DOCTYPE html&gt;
-    &lt;html lang="id"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Judul Halaman&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;Hello World &lt;/h1&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-   </code></pre>
+        <p>
+            Untuk membuka Command Palette, tekan
+            <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>P</kbd>
+            pada keyboard.
+        </p>
 
-<h4>&#9745; Status Terminal</h4>
-<p><samp>File berhasil disimpan</samp></p>
+        <p>
+            Untuk menyimpan dokumen
+            <kbd>CTRL</kbd> + <kbd>S</kbd>
+            pada keyboard.
+        </p>
 
-<hr>
+        <p>
+            Untuk membuka file
+            <kbd>CTRL</kbd> + <kbd>P</kbd>
+            pada keyboard.
+        </p>
 
-<p>
-        <a href="#info-kegiatan">
-            Lompat ke Info Kegiatan
-        </a>
-    </p>
+        <h4>&#11088; Struktur Dasar HTML</h4>
 
-    <p>
-        <a href="#top">
-            Kembali ke atas
-        </a>
-    </p>
+        <pre style="background-color: #222; padding: 20px; color: white;">
+        <code>&lt;!DOCTYPE html&gt;
+        &lt;html lang="id"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport"
+            content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Judul Halaman&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Hello World&lt;/h1&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</code>
+                </pre>
+
+        <h4>&#9745; Status Terminal</h4>
+        <p>
+            <samp>File berhasil disimpan</samp>
+        </p>
+    </div>
+
+    <!-- NAVIGASI BAWAH -->
+    <div class="card">
+        <p>
+            <a href="#info-kegiatan">
+                Lompat ke Info Kegiatan
+            </a>
+        </p>
+
+        <p>
+            <a href="#top">
+                Kembali ke atas
+            </a>
+        </p>
+    </div>
 
     <hr>
 
     <!-- FOOTER -->
     <p style="text-align: right;">
-        &copy; 2026 Dibuat oleh SATRIA PUTRA ANUGRAH - KELAS 11 PPLG 2 - SMKN 4 KUNINGAN
+        &copy; 2026 Dibuat oleh
+        <b>SATRIA PUTRA ANUGRAH</b> -
+        <b>KELAS XI PPLG 2</b> -
+        <b>SMKN 4 KUNINGAN</b>
     </p>
 
 </body>
