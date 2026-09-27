@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMP NEGERI 2 CILEDUG</title>
-    <link rel="icon" type="image/png" href="nero.png">
+    <link rel="icon" type="image/png" href="foto/nero.png">
     <link rel="stylesheet" href="website-nero.css">
 </head>
 <body id="top">
@@ -12,22 +12,28 @@
     <nav class="navbar">
 
         <a href="#beranda" class="logo">
-            <img src="nero.png" alt="Logo SMP Negeri 2 Ciledug">
+            <img src="foto/nero.png" alt="Logo SMP Negeri 2 Ciledug">
             <span>SMP NEGERI 2 CILEDUG</span>
         </a>
 
-        <ul class="nav-menu">
-            <li><a href="#beranda">Beranda</a></li>
-            <li><a href="#tentang">Tentang Kami</a></li>
-            <li><a href="#tentang-guru">Tentang Guru</a></li>
-            <li><a href="#kontak">Kontak</a></li>
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#beranda">🏠 Beranda</a></li>
+            <li><a href="#tentang">📖 Tentang Kami</a></li>
+            <li><a href="#tentang-guru">👨‍🏫 Tentang Guru</a></li>
+            <li><a href="#ekstrakurikuler">🏆 Ekstrakurikuler</a></li>
+            <li><a href="#kontak">📞 Kontak</a></li>
         </ul>
 
     </nav>
 </header>
 
     <main>
-        <section id="beranda">
+    <section id="beranda">
+
     <div class="hero-content">
         <div class="hero-text">
             <h1>SELAMAT DATANG DI SMP NEGERI 2 CILEDUG</h1>
@@ -43,7 +49,7 @@
         </div>
 
         <div class="hero-image">
-            <img src="nero.png" alt="Logo SMP Negeri 2 Ciledug">
+            <img src="foto/nero.png" alt="Logo SMP Negeri 2 Ciledug">
         </div>
     </div>
 </section>
@@ -247,7 +253,20 @@
             <a href="tentang-guru.html" class="tentang-guru-btn">Lihat Profil Guru</a>
         </section>
 
-        <section id="kontak">
+        <section id="ekstrakurikuler">
+
+            <h1>Ekstrakurikuler</h1>
+
+            <p>
+                SMP Negeri 2 Ciledug menyediakan berbagai kegiatan
+                ekstrakurikuler untuk mengembangkan bakat, minat,
+                kreativitas, keterampilan, dan karakter peserta didik.
+            </p>
+
+            <a href="eskul.html" class="ekstrakurikuler-btn">Lihat Ekstrakurikuler</a>
+        </section>
+
+    <section id="kontak">
     <h2>Kontak</h2>
 
     <p class="kontak-deskripsi">
@@ -282,8 +301,12 @@
         <div class="kontak-card">
             <h3>🕐 Jam Operasional</h3>
             <p>
-                Senin - Jumat<br>
-                07.00 - 15.00 WIB
+                Senin - Kamis<br>
+                07.00 - 13.40 WIB<br>
+                Jumat<br>
+                07.00 - 10.40 WIB<br>
+                Sabtu<br>
+                07.00 - 11.55 WIB
             </p>
         </div>
 
@@ -295,7 +318,11 @@
     <a href="#top" class="back-to-top">↑</a>
 
     <footer>
-        <p>&copy; SMP NEGERI 2 CILEDUG. All rights reserved.</p>
+    <p>&copy; SMP NEGERI 2 CILEDUG. All rights reserved.</p>
+
     </footer>
+
+<script src="website.js"></script>
+
 </body>
 </html>
