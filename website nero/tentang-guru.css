@@ -4,29 +4,65 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: aliceblue;
     color: #222;
 }
 
+/* Judul */
 body h1 {
-    text-align:center;
-    margin-top: 20px;
+    text-align: center;
+    margin-top: 40px;
+    color: #1a5d1a;
+    font-size: 32px;
 }
 
-body p {
-    text-align:left;
-    margin-top:auto;
+/* Deskripsi */
+body > p {
+    text-align: center;
+    margin: 15px auto 30px;
+    padding: 0 20px;
+    color: #555;
 }
 
+/* Artikel tentang guru */
+article {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 25px 30px;
+
+    background-color: white;
+    border-radius: 12px;
+
+    line-height: 1.8;
+    color: #444;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Container guru */
 .guru-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-/* Card */
+/* Card guru */
 .guru-card {
     background-color: white;
     border-radius: 12px;
@@ -37,13 +73,13 @@ body p {
     transition: 0.3s;
 }
 
-/* Efek ketika mouse diarahkan */
+/* Efek hover */
 .guru-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Foto */
+/* Foto guru */
 .guru-card img {
     display: block;
 
@@ -53,9 +89,10 @@ body p {
     object-fit: cover;
 }
 
-/* Bagian tulisan */
+/* Informasi guru */
 .guru-info {
     padding: 20px;
+    text-align: center;
 }
 
 .guru-card h3 {
@@ -67,4 +104,57 @@ body p {
 .guru-card p {
     color: #666;
     margin: 0;
+    padding: 0;
+}
+
+/* Tombol kembali */
+.kembali {
+    display: block;
+    width: fit-content;
+
+    margin: 30px auto 50px;
+    padding: 12px 25px;
+
+    background-color: #1787e2;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.kembali:hover {
+    background-color: #0d6fbe;
+    transform: translateY(-3px);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .guru-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* HP */
+@media (max-width: 600px) {
+    body h1 {
+        font-size: 26px;
+    }
+
+    article {
+        margin: 0 20px 30px;
+        padding: 20px;
+    }
+
+    .guru-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .guru-card img {
+        height: 280px;
+    }
 }

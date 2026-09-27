@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Profile Siswa</title>
 
     <meta name="description"
@@ -33,7 +34,6 @@
             text-decoration: none;
         }
 
-        /* KOTAK PROFIL */
         .card {
             background-color: white;
             padding: 20px;
@@ -41,24 +41,48 @@
             border-radius: 15px;
             border: 1px solid #ddd;
 
-            /* Animasi */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Efek kotak saat diarahkan kursor */
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
         }
 
-        /* Foto profil */
         .foto-profil {
             width: 150px;
             height: auto;
             border-radius: 12px;
         }
 
-        /* Footer */
+        .video-profile {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8fafc;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-profile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+        }
+
+        .video-profile video {
+            display: block;
+            width: 100%;
+            max-width: 420px;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        .video-profile p {
+            text-align: center;
+        }
+
         .footer {
             text-align: right;
         }
@@ -87,7 +111,9 @@
 
         <picture>
             <source media="(min-width: 600px)" srcset="foto-profil.jpg">
-            <img src="foto-profil-kecil.jpg"
+
+            <img
+                src="foto-profil-kecil.jpg"
                 alt="Foto profile"
                 class="foto-profil">
         </picture>
@@ -112,6 +138,31 @@
             <li>&#128177; Membuat website</li>
             <li>&#128178; Belajar Teknologi</li>
         </ul>
+
+        <!-- VIDEO -->
+        <div class="video-profile">
+
+            <h3>&#127909; Video Minat Teknologi</h3>
+
+            <video
+                controls
+                loop
+                muted
+                poster="https://www.w3schools.com/html/pic_trulli.jpg">
+
+                <source
+                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                    type="video/mp4">
+
+                Browser Anda tidak mendukung tag video HTML5.
+            </video>
+
+            <p>
+                Video ini merupakan contoh penggunaan elemen
+                <code>&lt;video&gt;</code> pada halaman profile.
+            </p>
+
+        </div>
     </div>
 
     <!-- BAGIAN PROFIL -->
@@ -174,7 +225,8 @@
 
     <!-- BAGIAN FOOTER -->
     <p class="footer">
-        &copy; 2026 Dibuat oleh SATRIA PUTRA ANUGRAH KELAS XI PPLG 2
+        &copy; 2026 Dibuat oleh SATRIA PUTRA ANUGRAH
+        KELAS XI PPLG 2
     </p>
 
 </body>

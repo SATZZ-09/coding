@@ -25,40 +25,67 @@
         }
 
         .card {
-        border: 1px solid #ddd;
-        padding: 20px;
-        margin-bottom: 20px;
-        background-color: white;
-        border-radius: 12px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 12px;
 
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .highlight {
-        background-color: #fff3cd;
-        color: #1a73e8;
-        padding: 3px 6px;
-        border-radius: 5px;
-        font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-    .badge {
-        background-color: #e3f2fd;
-        color: #1565c0;
-        padding: 4px 8px;
-        border-radius: 10px;
-        font-weight: bold;
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
         }
 
-    .keyword {
-        color: #d63384;
-        font-weight: bold;
-    }
+        .highlight {
+            background-color: #fff3cd;
+            color: #1a73e8;
+            padding: 3px 6px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .badge {
+            background-color: #e3f2fd;
+            color: #1565c0;
+            padding: 4px 8px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .keyword {
+            color: #d63384;
+            font-weight: bold;
+        }
+
+        .video-box {
+            background-color: #f8fafc;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+        }
+
+        .video-box video {
+            display: block;
+            width: 100%;
+            max-width: 580px;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        .video-box p {
+            text-align: center;
+            margin-bottom: 0;
+        }
     </style>
 </head>
 
@@ -169,6 +196,38 @@
         </p>
     </div>
 
+    <!-- SHOWCASE VIDEO -->
+    <div class="card">
+        <h2>&#127909; Showcase Media & Dokumentasi Belajar</h2>
+
+        <p>
+            Berikut adalah video sebagai media pembelajaran dan
+            dokumentasi multimedia pada portofolio saya.
+        </p>
+
+        <div class="video-box">
+
+            <video
+                controls
+                muted
+                width="100%"
+                poster="https://vjs.zencdn.net/v/oceans.png">
+
+                <source
+                    src="https://vjs.zencdn.net/v/oceans.mp4"
+                    type="video/mp4">
+
+                Browser Anda tidak mendukung tag video HTML5.
+            </video>
+
+            <p>
+                Video Ocean sebagai contoh penggunaan elemen
+                <code>&lt;video&gt;</code> dalam HTML.
+            </p>
+
+        </div>
+    </div>
+
     <!-- AGENDA -->
     <div class="card">
         <h3 id="info-kegiatan">
@@ -221,9 +280,10 @@
             &lt;h1&gt;Hello World&lt;/h1&gt;
         &lt;/body&gt;
         &lt;/html&gt;</code>
-                </pre>
+        </pre>
 
         <h4>&#9745; Status Terminal</h4>
+
         <p>
             <samp>File berhasil disimpan</samp>
         </p>
