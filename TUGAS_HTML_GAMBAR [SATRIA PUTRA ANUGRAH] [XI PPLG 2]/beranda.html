@@ -30,12 +30,11 @@
             margin-bottom: 20px;
             background-color: white;
             border-radius: 12px;
-
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
         }
 
@@ -60,31 +59,44 @@
             font-weight: bold;
         }
 
-        .video-box {
+        .video-box,
+        .audio-box {
             background-color: #f8fafc;
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .video-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
-        }
-
-        .video-box video {
+        .video-box video,
+        .audio-box audio {
             display: block;
             width: 100%;
             max-width: 580px;
-            margin: auto;
+            margin: 15px auto;
+        }
+
+        .video-box p,
+        .audio-box p {
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 15px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
             border-radius: 8px;
         }
 
-        .video-box p {
-            text-align: center;
-            margin-bottom: 0;
+        nav a:hover {
+            background-color: #1558b0;
         }
     </style>
 </head>
@@ -104,8 +116,7 @@
     <!-- HEADER -->
     <div class="card">
         <h1 style="text-align: center; color: #1a73e8;">
-            <span style="font-size: 32px;">&#128075;</span>
-            PORTAL SISWA SATRIA PUTRA ANUGRAH
+            &#128075; PORTAL SISWA SATRIA PUTRA ANUGRAH
         </h1>
 
         <p style="text-align: center;">
@@ -115,21 +126,15 @@
 
     <hr>
 
-    <!-- NAVIGASI -->
+    <!-- NAVIGASI 3 HALAMAN -->
     <div class="card">
         <h2>Menu Navigasi</h2>
 
-        <ul>
-            <li>
-                <a href="profil.html">Profile Saya</a>
-            </li>
-
-            <li>
-                <a href="https://github.com/SATZZ-09/coding.git" target="_blank">
-                    Github
-                </a>
-            </li>
-        </ul>
+        <nav>
+            <a href="beranda.html">Beranda</a>
+            <a href="profil.html">Profil Siswa</a>
+            <a href="galeri.html">Galeri Karya</a>
+        </nav>
     </div>
 
     <!-- DATA SISWA -->
@@ -196,7 +201,7 @@
         </p>
     </div>
 
-    <!-- SHOWCASE VIDEO -->
+    <!-- VIDEO -->
     <div class="card">
         <h2>&#127909; Showcase Media & Dokumentasi Belajar</h2>
 
@@ -228,6 +233,37 @@
         </div>
     </div>
 
+    <!-- AUDIO -->
+    <div class="card">
+        <h2>&#127925; Media Audio & Suara Pembelajaran</h2>
+
+        <p>
+            Berikut adalah pemutar audio sebagai tambahan media
+            pembelajaran pada website portofolio saya.
+        </p>
+
+        <div class="audio-box">
+
+            <audio controls>
+                <source
+                    src="https://www.w3schools.com/html/horse.mp3"
+                    type="audio/mpeg">
+
+                <source
+                    src="https://www.w3schools.com/html/horse.ogg"
+                    type="audio/ogg">
+
+                Browser Anda tidak mendukung tag audio HTML5.
+            </audio>
+
+            <p>
+                Audio ini merupakan contoh penggunaan elemen
+                <code>&lt;audio&gt;</code> dalam HTML.
+            </p>
+
+        </div>
+    </div>
+
     <!-- AGENDA -->
     <div class="card">
         <h3 id="info-kegiatan">
@@ -249,20 +285,17 @@
 
         <p>
             Untuk membuka Command Palette, tekan
-            <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>P</kbd>
-            pada keyboard.
+            <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>P</kbd>.
         </p>
 
         <p>
             Untuk menyimpan dokumen
-            <kbd>CTRL</kbd> + <kbd>S</kbd>
-            pada keyboard.
+            <kbd>CTRL</kbd> + <kbd>S</kbd>.
         </p>
 
         <p>
             Untuk membuka file
-            <kbd>CTRL</kbd> + <kbd>P</kbd>
-            pada keyboard.
+            <kbd>CTRL</kbd> + <kbd>P</kbd>.
         </p>
 
         <h4>&#11088; Struktur Dasar HTML</h4>
@@ -272,8 +305,6 @@
         &lt;html lang="id"&gt;
         &lt;head&gt;
             &lt;meta charset="UTF-8"&gt;
-            &lt;meta name="viewport"
-            content="width=device-width, initial-scale=1.0"&gt;
             &lt;title&gt;Judul Halaman&lt;/title&gt;
         &lt;/head&gt;
         &lt;body&gt;
@@ -292,15 +323,11 @@
     <!-- NAVIGASI BAWAH -->
     <div class="card">
         <p>
-            <a href="#info-kegiatan">
-                Lompat ke Info Kegiatan
-            </a>
+            <a href="#info-kegiatan">Lompat ke Info Kegiatan</a>
         </p>
 
         <p>
-            <a href="#top">
-                Kembali ke atas
-            </a>
+            <a href="#top">Kembali ke atas</a>
         </p>
     </div>
 

@@ -7,7 +7,7 @@
     <title>Profile Siswa</title>
 
     <meta name="description"
-        content="Website portofolio resmi Satria Putra Anugrah siswa XI PPLG 2 SMKN 4 KUNINGAN.">
+        content="profil resmi Satria Putra Anugrah siswa XI PPLG 2 SMKN 4 KUNINGAN.">
     <meta name="author" content="Satria Putra Anugrah">
 
     <link rel="icon" type="image/png" sizes="32x32"
@@ -45,7 +45,7 @@
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
         }
 
@@ -55,20 +55,31 @@
             border-radius: 12px;
         }
 
-        .video-profile {
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 15px;
+            background-color: #1a73e8;
+            color: white;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            background-color: #1558b0;
+        }
+
+        .video-profile,
+        .audio-profile {
             margin-top: 20px;
             padding: 15px;
             background-color: #f8fafc;
             border: 1px solid #ddd;
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
-
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .video-profile:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
         }
 
         .video-profile video {
@@ -79,8 +90,23 @@
             border-radius: 8px;
         }
 
-        .video-profile p {
+        .audio-profile audio {
+            display: block;
+            width: 100%;
+            max-width: 420px;
+            margin: 15px auto;
+        }
+
+        .video-profile p,
+        .audio-profile p {
             text-align: center;
+        }
+
+        .map {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 8px;
         }
 
         .footer {
@@ -91,30 +117,34 @@
 
 <body id="top">
 
-    <!-- BAGIAN HEADER -->
+    <!-- HEADER -->
     <h1>PROFIL SISWA</h1>
 
     <hr>
 
-    <!-- BAGIAN NAVIGASI -->
-    <ul>
-        <li>
-            <a href="beranda.html">Kembali ke beranda</a>
-        </li>
-    </ul>
+    <!-- NAVIGASI -->
+    <div class="card">
+        <h2>Menu Navigasi</h2>
 
-    <hr>
+        <nav>
+            <a href="beranda.html">Beranda</a>
+            <a href="profil.html">Profil Siswa</a>
+            <a href="galeri.html">Galeri Karya</a>
+        </nav>
+    </div>
 
-    <!-- BAGIAN DATA DIRI -->
+    <!-- DATA DIRI -->
     <div class="card">
         <h2>Data Diri</h2>
 
         <picture>
-            <source media="(min-width: 600px)" srcset="foto-profil.jpg">
+            <source
+                media="(min-width: 600px)"
+                srcset="foto-profil.jpg">
 
             <img
                 src="foto-profil-kecil.jpg"
-                alt="Foto profile"
+                alt="Foto Profile"
                 class="foto-profil">
         </picture>
 
@@ -125,19 +155,39 @@
             <br>
             <b>&#128203; Sekolah:</b> SMKN 4 KUNINGAN
             <br>
-            <b>&#128204; Jurusan:</b> Pengembangan perangkat lunak dan gim
+            <b>&#128204; Jurusan:</b> Pengembangan Perangkat Lunak dan Gim
         </p>
     </div>
 
-    <!-- BAGIAN HOBI -->
+    <!-- HOBI -->
     <div class="card">
         <h3>Hobi dan Minat</h3>
 
         <ul>
             <li>&#128176; Belajar coding</li>
             <li>&#128177; Membuat website</li>
-            <li>&#128178; Belajar Teknologi</li>
+            <li>&#128178; Belajar teknologi</li>
         </ul>
+
+        <!-- AUDIO -->
+        <div class="audio-profile">
+
+            <h3>&#127925; Efek Suara Favorit</h3>
+
+            <audio controls>
+                <source
+                    src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
+                    type="audio/mpeg">
+
+                Browser Anda tidak mendukung tag audio HTML5.
+            </audio>
+
+            <p>
+                Audio ini merupakan contoh penggunaan elemen
+                <code>&lt;audio&gt;</code> pada halaman profile.
+            </p>
+
+        </div>
 
         <!-- VIDEO -->
         <div class="video-profile">
@@ -165,7 +215,7 @@
         </div>
     </div>
 
-    <!-- BAGIAN PROFIL -->
+    <!-- PROFIL -->
     <div class="card">
         <h2>&#128075; Profil Saya</h2>
 
@@ -184,19 +234,34 @@
         </p>
     </div>
 
-    <!-- BAGIAN TUJUAN BELAJAR -->
+    <!-- TUJUAN BELAJAR -->
     <div class="card">
         <h3>&#11088; Tujuan Belajar</h3>
 
         <p>
-            Saya ingin meningkatkan kemampuan di bidang saya
+            Saya ingin meningkatkan kemampuan di bidang
             <i>pemrograman website</i> dan membuat project yang bermanfaat.
         </p>
     </div>
 
-    <hr>
+    <!-- LOKASI SEKOLAH -->
+    <div class="card">
+        <h3>&#128205; Lokasi Kampus Sekolah</h3>
 
-    <!-- BAGIAN CONTACT -->
+        <p>
+            Berikut adalah lokasi SMKN 4 Kuningan pada Google Maps.
+        </p>
+
+        <iframe
+            class="map"
+            src="https://www.google.com/maps?q=SMKN+4+Kuningan&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            title="Peta Lokasi SMKN 4 Kuningan">
+        </iframe>
+    </div>
+
+    <!-- CONTACT -->
     <div class="card">
         <h3>&#9742; Hubungi Saya</h3>
 
@@ -217,16 +282,20 @@
         </ul>
     </div>
 
+    <!-- LINK BAWAH -->
     <p>
-        <a href="beranda.html">Beranda</a>
+        <a href="beranda.html">Beranda</a> |
+        <a href="galeri.html">Galeri Karya</a>
     </p>
 
     <hr>
 
-    <!-- BAGIAN FOOTER -->
+    <!-- FOOTER -->
     <p class="footer">
-        &copy; 2026 Dibuat oleh SATRIA PUTRA ANUGRAH
-        KELAS XI PPLG 2
+        &copy; 2026 Dibuat oleh
+        <b>SATRIA PUTRA ANUGRAH</b> -
+        <b>KELAS XI PPLG 2</b> -
+        <b>SMKN 4 KUNINGAN</b>
     </p>
 
 </body>
