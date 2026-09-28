@@ -1,0 +1,104 @@
+.kegiatan-halaman {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.kegiatan-halaman h1 {
+    margin-bottom: 15px;
+    color: #1a5d1a;
+}
+
+.kegiatan-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.kegiatan-card {
+    width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.kegiatan-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.kegiatan-card h2 {
+    margin-top: 15px;
+}
+
+.kegiatan-card p {
+    line-height: 1.6;
+}
+
+.kegiatan-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.kegiatan-card > img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.kegiatan-card:hover > img {
+    transform: scale(1.05);
+}
+
+.kegiatan-card-content {
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 22px;
+}
+
+.kembali-btn {
+    display: block;
+
+    width: fit-content;
+
+    margin: 45px auto 0;
+
+    padding: 12px 25px;
+
+    background-color: #1787e2;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+
+.kembali-btn:hover {
+    background-color: #0d6fbe;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,57 @@
+.detail-eskul {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.detail-eskul h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.detail-eskul h2 {
+    margin-top: 30px;
+    color: #1a73e8;
+}
+
+.detail-eskul p {
+    line-height: 1.8;
+}
+
+.detail-eskul-img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    object-fit: cover;
+    margin: 0 auto 30px;
+    border-radius: 12px;
+}
+
+.detail-eskul ul {
+    line-height: 1.8;
+    padding-left: 25px;
+}
+
+.detail-eskul li {
+    margin-bottom: 10px;
+}
+
+.kembali-btn {
+    display: block;
+    width: fit-content;
+    margin: 35px auto 0;
+    padding: 12px 20px;
+    background-color: #1a73e8;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.kembali-btn:hover {
+    background-color: #1558b0;
+}
