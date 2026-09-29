@@ -31,6 +31,11 @@
     border-radius: 12px;
 }
 
+.detail-eskul ul {
+    line-height: 1.8;
+    padding-left: 25px;
+}
+
 .detail-eskul li {
     margin-bottom: 10px;
 }
@@ -45,12 +50,8 @@
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 .kembali-btn:hover {
     background-color: #1558b0;
-    transform: translateY(-3px);
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
