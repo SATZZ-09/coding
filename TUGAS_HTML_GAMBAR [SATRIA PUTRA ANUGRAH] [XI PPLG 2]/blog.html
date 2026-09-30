@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog & Jurnal - Portfolio Saya</title>
+
+    <meta name="description"
+        content="Website portofolio resmi Satria Putra Anugrah siswa XI PPLG 2 SMKN 4 Kuningan.">
+    <meta name="author" content="Satria Putra Anugrah">
+
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://www.smkn4kuningan.sch.id/favicon-32x32.png">
+
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://www.smkn4kuningan.sch.id/favicon-16x16.png">
+
+
+    <style>
+        /*
+        PALET WARNA COLOR HUNT
+        1. Background Utama : #F8F9FA
+        2. Header & Footer  : #212529
+        3. Aksen / Active   : #006EF0
+        4. Warna Teks      : #333333
+        */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F8F9FA;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        #header-blog,
+        #footer-blog {
+            background-color: #212529;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #header-blog h1 {
+            margin: 0 0 15px;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #006EF0;
+        }
+
+        nav a.active {
+            color: #006EF0;
+            font-weight: bold;
+            border-bottom: 2px solid #006EF0;
+            padding-bottom: 5px;
+        }
+
+        #konten-utama {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 25px;
+        }
+
+        #konten-utama article {
+            flex: 3;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        #sidebar-blog {
+            flex: 1;
+        }
+
+        .post-jurnal h2 {
+            color: #212529;
+            margin-top: 0;
+        }
+
+        .post-jurnal h3 {
+            color: #006EF0;
+        }
+
+        .post-jurnal small {
+            color: #666666;
+        }
+
+        .babak-cerita {
+            margin-top: 25px;
+            padding: 15px;
+            border-left: 4px solid #006EF0;
+            background-color: #F8F9FA;
+        }
+
+        .foto-jurnal {
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .foto-jurnal img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .foto-jurnal figcaption {
+            font-size: 0.85rem;
+            color: #6c757d;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        .widget {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .widget h3 {
+            margin-top: 0;
+            color: #212529;
+        }
+
+        .badge-tag {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #006EF0;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 3px;
+            transition: 0.2s ease;
+        }
+
+        .badge-tag:hover {
+            background-color: #006EF0;
+            color: #ffffff;
+        }
+
+        .area-komentar {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #F8F9FA;
+            border-radius: 10px;
+        }
+
+        .area-komentar input,
+        .area-komentar textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        .area-komentar textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .area-komentar button {
+            background-color: #006EF0;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .area-komentar button:hover {
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header & Menu Navigasi -->
+    <header id="header-blog">
+
+        <h1>Jurnal Harian Siswa PPLG</h1>
+
+        <nav class="nav-utama">
+            <a href="beranda.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="blog.html" class="active">Blog</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Konten Utama -->
+    <main id="konten-utama">
+
+        <!-- Artikel Jurnal -->
+        <article class="post-jurnal">
+
+            <h2>Perjalanan Hari Pertama Masuk Lab PPLG</h2>
+
+            <p>
+                <small>
+                    Dipublikasikan pada:
+                    <time datetime="2026-09-30">30 September 2026</time>
+                </small>
+            </p>
+
+
+            <!-- Foto Dokumentasi -->
+            <figure class="foto-jurnal">
+
+                <!-- GANTI "foto-saya.jpg" DENGAN NAMA FOTO KAMU -->
+                <img src="dokumentasi.jpg"
+                     alt="Foto saya sedang belajar coding">
+
+                <figcaption>
+                    Dokumentasi saat belajar dan praktik coding di lab PPLG.
+                </figcaption>
+
+            </figure>
+
+
+            <!-- Babak 1 -->
+            <section class="babak-cerita">
+
+                <h3>Awal Mula Masuk PPLG</h3>
+
+                <p>
+                    Awalnya saya memilih jurusan PPLG karena tertarik dengan
+                    dunia teknologi dan ingin belajar membuat website serta
+                    aplikasi. Pada awal belajar coding, saya merasa cukup
+                    bingung karena banyak tag dan kode yang harus dipahami.
+                    Namun, setelah sering berlatih saya mulai mengerti dasar
+                    HTML dan cara membuat sebuah halaman website.
+                </p>
+
+            </section>
+
+
+            <!-- Babak 2 -->
+            <section class="babak-cerita">
+
+                <h3>Drama Kena Bug dan Error</h3>
+
+                <p>
+                    Saat mengerjakan tugas coding, saya beberapa kali mengalami
+                    error. Pernah ada tag HTML yang lupa ditutup sehingga
+                    tampilan website menjadi berantakan. Saya juga pernah
+                    salah menuliskan nama file gambar sehingga gambar tidak
+                    muncul. Dari masalah tersebut saya belajar untuk lebih
+                    teliti dalam menulis kode dan mengecek kembali setiap
+                    bagian program.
+                </p>
+
+            </section>
+
+
+            <!-- Babak 3 -->
+            <section class="babak-cerita">
+
+                <h3>Pelajaran dan Harapan Saya</h3>
+
+                <p>
+                    Dari belajar PPLG, saya memahami bahwa membuat program
+                    membutuhkan ketelitian, kesabaran, dan kemauan untuk terus
+                    mencoba. Saya berharap kemampuan coding saya semakin
+                    berkembang sehingga setelah lulus nanti saya dapat
+                    membuat website atau aplikasi yang bermanfaat dan bisa
+                    menjadi bekal untuk masa depan.
+                </p>
+
+            </section>
+
+
+            <!-- Form Komentar -->
+            <section class="area-komentar">
+
+                <h3>Komentar</h3>
+
+                <form>
+
+                    <label for="nama">Nama:</label>
+                    <input type="text"
+                           id="nama"
+                           name="nama"
+                           placeholder="Masukkan nama">
+
+                    <label for="komentar">Komentar:</label>
+                    <textarea id="komentar"
+                              name="komentar"
+                              placeholder="Tulis komentar..."></textarea>
+
+                    <button type="submit">
+                        Kirim Komentar
+                    </button>
+
+                </form>
+
+            </section>
+
+        </article>
+
+
+        <!-- Sidebar -->
+        <aside id="sidebar-blog">
+
+            <!-- Widget Profil -->
+            <div class="widget">
+
+                <h3>Profil Saya</h3>
+
+                <p>
+                    <strong>Nama:</strong> SATRIA PUTRA ANUGRAH
+                </p>
+
+                <p>
+                    <strong>Kelas:</strong> XI PPLG 2
+                </p>
+
+                <p>
+                    <strong>Moto:</strong>
+                    Terus belajar dan jangan takut mencoba.
+                </p>
+
+            </div>
+
+
+            <!-- Widget Tag -->
+            <div class="widget">
+
+                <h3>Kategori Tag</h3>
+
+                <span class="badge-tag">#Curhat</span>
+                <span class="badge-tag">#PPLG</span>
+                <span class="badge-tag">#Error</span>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer id="footer-blog">
+
+        <p>
+            &copy; 2026 - PPLG SMKN 4 KUNINGAN - Dibuat oleh SATRIA PUTRA ANUGRAH
+        </p>
+
+    </footer>
+
+</body>
+</html>
