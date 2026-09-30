@@ -7,7 +7,7 @@
     <title>Profile Siswa</title>
 
     <meta name="description"
-        content="profil resmi Satria Putra Anugrah siswa XI PPLG 2 SMKN 4 KUNINGAN.">
+        content="Profil resmi Satria Putra Anugrah siswa XI PPLG 2 SMKN 4 KUNINGAN.">
     <meta name="author" content="Satria Putra Anugrah">
 
     <link rel="icon" type="image/png" sizes="32x32"
@@ -26,7 +26,7 @@
 
         h1 {
             text-align: center;
-            color: #1a73e8;
+            color: #006EF0;
         }
 
         a {
@@ -40,7 +40,6 @@
             margin: 20px 0;
             border-radius: 15px;
             border: 1px solid #ddd;
-
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -55,6 +54,7 @@
             border-radius: 12px;
         }
 
+        /* NAVIGASI */
         nav {
             text-align: center;
         }
@@ -63,13 +63,23 @@
             display: inline-block;
             margin: 5px;
             padding: 10px 15px;
-            background-color: #1a73e8;
+            background-color: #006EF0;
             color: white;
             border-radius: 8px;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        nav a.active {
+            background-color: #006EF0;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 0 0 2px #006EF0;
         }
 
         nav a:hover {
-            background-color: #1558b0;
+            background-color: #005AC8;
+            color: white;
         }
 
         .video-profile,
@@ -128,7 +138,7 @@
 
         <nav>
             <a href="beranda.html">Beranda</a>
-            <a href="profil.html">Profil Siswa</a>
+            <a href="profil.html" class="active">Profil Siswa</a>
             <a href="galeri.html">Galeri Karya</a>
             <a href="blog.html">Blog</a>
         </nav>
@@ -290,6 +300,7 @@
     <p>
         <a href="beranda.html">Beranda</a>
         <a href="galeri.html">Galeri Karya</a>
+        <a href="blog.html">Blog</a>
     </p>
 
     <hr>

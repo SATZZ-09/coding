@@ -28,7 +28,7 @@
 
         h1 {
             text-align: center;
-            color: #1a73e8;
+            color: #006EF0;
         }
 
         .card ul {
@@ -44,19 +44,25 @@
         .card ul li a {
             display: inline-block;
             padding: 10px 15px;
-            background-color: #1a73e8;
+            background-color: #006EF0;
             color: white;
             text-decoration: none;
             border-radius: 8px;
-            transition: 0.3s ease;
+            transition: 0.2s ease;
+        }
+
+        .card ul li a.active {
+            background-color: #006EF0;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 0 0 2px #006EF0;
         }
 
         .card ul li a:hover {
-            background-color: #1558b0;
+            background-color: #005AC8;
             color: white;
             text-decoration: none;
         }
-
 
         a {
             color: #0b3c5d;
@@ -64,7 +70,7 @@
         }
 
         a:hover {
-            color: #1a73e8;
+            color: #006EF0;
             text-decoration: underline;
         }
 
@@ -144,7 +150,6 @@
 
     </div>
 
-
     <!-- NAVIGASI -->
     <div class="card">
 
@@ -165,7 +170,7 @@
             </li>
 
             <li>
-                <a href="galeri.html">
+                <a href="galeri.html" class="active">
                     Galeri Karya
                 </a>
             </li>
@@ -179,7 +184,6 @@
         </ul>
 
     </div>
-
 
     <!-- VIDEO YOUTUBE -->
     <div class="card video-box">
@@ -199,7 +203,6 @@
 
     </div>
 
-
     <!-- LAYAR PROYEKTOR MINI -->
     <div class="card projector">
 
@@ -210,7 +213,6 @@
             halaman di dalam layar proyektor.
         </p>
 
-
         <!-- LINK TARGET -->
 
         <a
@@ -219,13 +221,11 @@
             🏠 Buka Beranda
         </a>
 
-
         <a
             href="profil.html"
             target="proyektor-karya">
             👤 Buka Profil
         </a>
-
 
         <!-- IFRAME -->
 
@@ -236,7 +236,6 @@
         </iframe>
 
     </div>
-
 
     <!-- FOOTER -->
 

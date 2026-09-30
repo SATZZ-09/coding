@@ -40,7 +40,7 @@
 
         .highlight {
             background-color: #fff3cd;
-            color: #1a73e8;
+            color: #006EF0;
             padding: 3px 6px;
             border-radius: 5px;
             font-weight: bold;
@@ -81,6 +81,7 @@
             text-align: center;
         }
 
+        /* NAVIGASI */
         nav {
             text-align: center;
         }
@@ -89,14 +90,22 @@
             display: inline-block;
             margin: 5px;
             padding: 10px 15px;
-            background-color: #1a73e8;
+            background-color: #006EF0;
             color: white;
             text-decoration: none;
             border-radius: 8px;
+            transition: 0.2s ease;
+        }
+
+        nav a.active {
+            background-color: #006EF0;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 0 0 2px #006EF0;
         }
 
         nav a:hover {
-            background-color: #1558b0;
+            background-color: #005AC8;
         }
 
         .card p a[href="#info-kegiatan"],
@@ -104,16 +113,16 @@
             display: inline-block;
             margin: 5px;
             padding: 10px 15px;
-            background-color: #1a73e8;
+            background-color: #006EF0;
             color: white;
             text-decoration: none;
             border-radius: 8px;
-            
+            transition: 0.2s ease;
         }
 
         .card p a[href="#info-kegiatan"]:hover,
         .card p a[href="#top"]:hover {
-            background-color: #1558b0;
+            background-color: #005AC8;
         }
 
         .table-card {
@@ -139,7 +148,7 @@
             padding: 15px;
             font-size: 20px;
             font-weight: bold;
-            color: #1a73e8;
+            color: #006EF0;
         }
 
         .schedule-table th,
@@ -151,14 +160,14 @@
         }
 
         .schedule-table thead th {
-            background-color: #1a73e8;
+            background-color: #006EF0;
             color: white;
             font-weight: bold;
         }
 
         .schedule-table tbody td:first-child {
             font-weight: bold;
-            color: #1a73e8;
+            color: #006EF0;
             background-color: #f1f6ff;
         }
 
@@ -209,9 +218,26 @@
             margin-top: 15px;
             padding: 12px 15px;
             background-color: #f1f6ff;
-            border-left: 5px solid #1a73e8;
+            border-left: 5px solid #006EF0;
             border-radius: 6px;
             color: #444;
+        }
+
+        /* PANDUAN */
+        .panduan {
+            background-color: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .panduan a {
+            color: #006EF0;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .panduan a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -230,7 +256,7 @@
 
     <!-- HEADER -->
     <div class="card">
-        <h1 style="text-align: center; color: #1a73e8;">
+        <h1 style="text-align: center; color: #006EF0;">
             &#128075; PORTAL SISWA SATRIA PUTRA ANUGRAH
         </h1>
 
@@ -241,12 +267,12 @@
 
     <hr>
 
-    <!-- NAVIGASI 3 HALAMAN -->
+    <!-- NAVIGASI -->
     <div class="card">
         <h2>Menu Navigasi</h2>
 
         <nav>
-            <a href="beranda.html">Beranda</a>
+            <a href="beranda.html" class="active">Beranda</a>
             <a href="profil.html">Profil Siswa</a>
             <a href="galeri.html">Galeri Karya</a>
             <a href="blog.html">Blog</a>
@@ -317,295 +343,278 @@
         </p>
     </div>
 
-   <!-- JADWAL PELAJARAN -->
-<div class="card">
-    <h2>&#128197; Jadwal Pelajaran XI PPLG 2</h2>
+    <!-- JADWAL PELAJARAN -->
+    <div class="card">
+        <h2>&#128197; Jadwal Pelajaran XI PPLG 2</h2>
 
-    <div class="table-card">
+        <div class="table-card">
 
-        <table class="schedule-table">
+            <table class="schedule-table">
 
-            <caption>
-                Jadwal Pelajaran XI PPLG 2 - Semester Gasal 2026/2027
-            </caption>
+                <caption>
+                    Jadwal Pelajaran XI PPLG 2 - Semester Gasal 2026/2027
+                </caption>
 
-            <colgroup>
-                <col style="width: 12%; background-color: #e8f0fe;">
-                <col style="width: 10%; background-color: #e8f0fe;">
-                <col style="width: 18%; background-color: #e8f0fe;">
-                <col style="width: 30%;">
-                <col style="width: 30%;">
-            </colgroup>
+                <colgroup>
+                    <col style="width: 12%; background-color: #e8f0fe;">
+                    <col style="width: 10%; background-color: #e8f0fe;">
+                    <col style="width: 18%; background-color: #e8f0fe;">
+                    <col style="width: 30%;">
+                    <col style="width: 30%;">
+                </colgroup>
 
-            <thead>
-                <tr>
-                    <th>Hari</th>
-                    <th>Jam Ke</th>
-                    <th>Waktu</th>
-                    <th>Mata Pelajaran</th>
-                    <th>Guru</th>
-                </tr>
-            </thead>
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Jam Ke</th>
+                        <th>Waktu</th>
+                        <th>Mata Pelajaran</th>
+                        <th>Guru</th>
+                    </tr>
+                </thead>
 
-            <tbody>
+                <tbody>
 
-                <!-- ================= SENIN ================= -->
+                    <!-- SENIN -->
+                    <tr>
+                        <td rowspan="11"><strong>Senin</strong></td>
+                        <td>1</td>
+                        <td>06.30 - 07.15</td>
+                        <td><span class="subject">Upacara</span></td>
+                        <td>Without teacher</td>
+                    </tr>
 
-                <tr>
-                    <td rowspan="11"><strong>Senin</strong></td>
-                    <td>1</td>
-                    <td>06.30 - 07.15</td>
-                    <td><span class="subject">Upacara</span></td>
-                    <td>Without teacher</td>
-                </tr>
+                    <tr>
+                        <td rowspan="4">2 - 5</td>
+                        <td rowspan="4">07.15 - 09.30</td>
+                        <td rowspan="4">
+                            <span class="subject">Rekayasa Perangkat Lunak</span>
+                        </td>
+                        <td rowspan="4">Eka Mutia Putri, S.Kom.</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
 
-                <tr>
-                    <td rowspan="4">2 - 5</td>
-                    <td rowspan="4">07.15 - 09.30</td>
-                    <td rowspan="4">
-                        <span class="subject">Rekayasa Perangkat Lunak</span>
-                    </td>
-                    <td rowspan="4">Eka Mutia Putri, S.Kom.</td>
-                </tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
+                    <tr>
+                        <td rowspan="2">6 - 7</td>
+                        <td rowspan="2">10.35 - 12.05</td>
+                        <td rowspan="2">
+                            <span class="subject">Penjasorkes</span>
+                        </td>
+                        <td rowspan="2">Abdul Husen, S.Pd.</td>
+                    </tr>
+                    <tr></tr>
 
-                <tr>
-                    <td rowspan="2">6 - 7</td>
-                    <td rowspan="2">10.35 - 12.05</td>
-                    <td rowspan="2">
-                        <span class="subject">Penjasorkes</span>
-                    </td>
-                    <td rowspan="2">Abdul Husen, S.Pd.</td>
-                </tr>
-                <tr></tr>
+                    <tr>
+                        <td rowspan="2">8 - 9</td>
+                        <td rowspan="2">12.35 - 13.55</td>
+                        <td rowspan="2">
+                            <span class="subject">B. Inggris</span>
+                        </td>
+                        <td rowspan="2">Ulfia Nur Agussetia, S.Pd.</td>
+                    </tr>
+                    <tr></tr>
 
-                <tr>
-                    <td rowspan="2">8 - 9</td>
-                    <td rowspan="2">12.35 - 13.55</td>
-                    <td rowspan="2">
-                        <span class="subject">B. Inggris</span>
-                    </td>
-                    <td rowspan="2">Ulfia Nur Agussetia, S.Pd.</td>
-                </tr>
-                <tr></tr>
+                    <tr>
+                        <td rowspan="2">10 - 11</td>
+                        <td rowspan="2">13.55 - 15.15</td>
+                        <td rowspan="2">
+                            <span class="subject">Bahasa Sunda</span>
+                        </td>
+                        <td rowspan="2">Ade Gumelar, S.Pd.</td>
+                    </tr>
+                    <tr></tr>
 
-                <tr>
-                    <td rowspan="2">10 - 11</td>
-                    <td rowspan="2">13.55 - 15.15</td>
-                    <td rowspan="2">
-                        <span class="subject">Bahasa Sunda</span>
-                    </td>
-                    <td rowspan="2">Ade Gumelar, S.Pd.</td>
-                </tr>
-                <tr></tr>
+                    <tr>
+                        <td colspan="5" class="break">
+                            &#9749; ISTIRAHAT
+                        </td>
+                    </tr>
 
+                    <!-- SELASA -->
+                    <tr>
+                        <td rowspan="10"><strong>Selasa</strong></td>
+                        <td rowspan="3">1 - 3</td>
+                        <td rowspan="3">06.30 - 08.45</td>
+                        <td rowspan="3">
+                            <span class="subject">PAIBP</span>
+                        </td>
+                        <td rowspan="3">Maman Lukmanul Hakim, S.Pd.</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
 
-                <!-- ISTIRAHAT SENIN -->
-                <tr>
-                    <td colspan="5" class="break">
-                        &#9749; ISTIRAHAT
-                    </td>
-                </tr>
+                    <tr>
+                        <td rowspan="2">4 - 5</td>
+                        <td rowspan="2">08.45 - 10.35</td>
+                        <td rowspan="2">
+                            <span class="subject">Sejarah</span>
+                        </td>
+                        <td rowspan="2">Roni Purnama, S.Pd.</td>
+                    </tr>
+                    <tr></tr>
 
+                    <tr>
+                        <td rowspan="2">6 - 7</td>
+                        <td rowspan="2">10.35 - 12.05</td>
+                        <td rowspan="2">
+                            <span class="subject">Rekayasa Perangkat Lunak</span>
+                        </td>
+                        <td rowspan="2">Candra Apriana, S.Pd.</td>
+                    </tr>
+                    <tr></tr>
 
-                <!-- ================= SELASA ================= -->
+                    <tr>
+                        <td rowspan="3">8 - 10</td>
+                        <td rowspan="3">12.35 - 14.35</td>
+                        <td rowspan="3">
+                            <span class="subject">Rekayasa Perangkat Lunak</span>
+                        </td>
+                        <td rowspan="3">Nurul Rahmayani, S.Pd.</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
 
-                <tr>
-                    <td rowspan="10"><strong>Selasa</strong></td>
-                    <td rowspan="3">1 - 3</td>
-                    <td rowspan="3">06.30 - 08.45</td>
-                    <td rowspan="3">
-                        <span class="subject">PAIBP</span>
-                    </td>
-                    <td rowspan="3">Maman Lukmanul Hakim, S.Pd.</td>
-                </tr>
-                <tr></tr>
-                <tr></tr>
+                    <tr>
+                        <td colspan="5" class="break">
+                            &#9749; ISTIRAHAT
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td rowspan="2">4 - 5</td>
-                    <td rowspan="2">08.45 - 10.35</td>
-                    <td rowspan="2">
-                        <span class="subject">Sejarah</span>
-                    </td>
-                    <td rowspan="2">Roni Purnama, S.Pd.</td>
-                </tr>
-                <tr></tr>
+                    <!-- RABU -->
+                    <tr>
+                        <td rowspan="11"><strong>Rabu</strong></td>
+                        <td rowspan="5">1 - 5</td>
+                        <td rowspan="5">06.30 - 09.10</td>
+                        <td rowspan="5">
+                            <span class="subject">KIK</span>
+                        </td>
+                        <td rowspan="5">Teguh Saputra, S.Pd.</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
 
-                <tr>
-                    <td rowspan="2">6 - 7</td>
-                    <td rowspan="2">10.35 - 12.05</td>
-                    <td rowspan="2">
-                        <span class="subject">Rekayasa Perangkat Lunak</span>
-                    </td>
-                    <td rowspan="2">Candra Apriana, S.Pd.</td>
-                </tr>
-                <tr></tr>
+                    <tr>
+                        <td rowspan="3">6 - 8</td>
+                        <td rowspan="3">10.10 - 12.10</td>
+                        <td rowspan="3">
+                            <span class="subject">Matematika</span>
+                        </td>
+                        <td rowspan="3">Euis Herawati, S.Pd.</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
 
-                <tr>
-                    <td rowspan="3">8 - 10</td>
-                    <td rowspan="3">12.35 - 14.35</td>
-                    <td rowspan="3">
-                        <span class="subject">Rekayasa Perangkat Lunak</span>
-                    </td>
-                    <td rowspan="3">Nurul Rahmayani, S.Pd.</td>
-                </tr>
-                <tr></tr>
-                <tr></tr>
+                    <tr>
+                        <td rowspan="3">9 - 11</td>
+                        <td rowspan="3">12.40 - 14.40</td>
+                        <td rowspan="3">
+                            <span class="subject">Rekayasa Perangkat Lunak</span>
+                        </td>
+                        <td rowspan="3">Esa Daniarsa, S.Kom.</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
 
+                    <tr>
+                        <td colspan="5" class="break">
+                            &#9749; ISTIRAHAT
+                        </td>
+                    </tr>
 
-                <!-- ISTIRAHAT SELASA -->
-                <tr>
-                    <td colspan="5" class="break">
-                        &#9749; ISTIRAHAT
-                    </td>
-                </tr>
+                    <!-- KAMIS -->
+                    <tr>
+                        <td rowspan="10"><strong>Kamis</strong></td>
+                        <td rowspan="2">1 - 2</td>
+                        <td rowspan="2">06.30 - 08.00</td>
+                        <td rowspan="2">
+                            <span class="subject">B. Inggris</span>
+                        </td>
+                        <td rowspan="2">Ulfia Nur Agussetia, S.Pd.</td>
+                    </tr>
+                    <tr></tr>
 
+                    <tr>
+                        <td rowspan="5">3 - 7</td>
+                        <td rowspan="5">08.00 - 12.05</td>
+                        <td rowspan="5">
+                            <span class="subject">Rekayasa Perangkat Lunak</span>
+                        </td>
+                        <td rowspan="5">Nurul Rahmayani, S.Pd.</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
 
-                <!-- ================= RABU ================= -->
+                    <tr>
+                        <td rowspan="3">8 - 10</td>
+                        <td rowspan="3">12.35 - 14.35</td>
+                        <td rowspan="3">
+                            <span class="subject">Mapel Pilihan PPLG</span>
+                        </td>
+                        <td rowspan="3">Eka Mutia Putri, S.Kom.</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
 
-                <tr>
-                    <td rowspan="11"><strong>Rabu</strong></td>
-                    <td rowspan="5">1 - 5</td>
-                    <td rowspan="5">06.30 - 09.10</td>
-                    <td rowspan="5">
-                        <span class="subject">KIK</span>
-                    </td>
-                    <td rowspan="5">Teguh Saputra, S.Pd.</td>
-                </tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
+                    <tr>
+                        <td colspan="5" class="break">
+                            &#9749; ISTIRAHAT
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td rowspan="3">6 - 8</td>
-                    <td rowspan="3">10.10 - 12.10</td>
-                    <td rowspan="3">
-                        <span class="subject">Matematika</span>
-                    </td>
-                    <td rowspan="3">Euis Herawati, S.Pd.</td>
-                </tr>
-                <tr></tr>
-                <tr></tr>
+                    <!-- JUMAT -->
+                    <tr>
+                        <td rowspan="7"><strong>Jumat</strong></td>
+                        <td>1</td>
+                        <td>06.30 - 07.10</td>
+                        <td>
+                            <span class="subject">Pembinaan</span>
+                        </td>
+                        <td>Without teacher</td>
+                    </tr>
 
-                <tr>
-                    <td rowspan="3">9 - 11</td>
-                    <td rowspan="3">12.40 - 14.40</td>
-                    <td rowspan="3">
-                        <span class="subject">Rekayasa Perangkat Lunak</span>
-                    </td>
-                    <td rowspan="3">Esa Daniarsa, S.Kom.</td>
-                </tr>
-                <tr></tr>
-                <tr></tr>
+                    <tr>
+                        <td rowspan="3">2 - 4</td>
+                        <td rowspan="3">07.10 - 09.10</td>
+                        <td rowspan="3">
+                            <span class="subject">B. Inggris</span>
+                        </td>
+                        <td rowspan="3">Ulfia Nur Agussetia, S.Pd.</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
 
+                    <tr>
+                        <td rowspan="3">5 - 7</td>
+                        <td rowspan="3">09.30 - 11.30</td>
+                        <td rowspan="3">
+                            <span class="subject">Rekayasa Perangkat Lunak</span>
+                        </td>
+                        <td rowspan="3">Candra Apriana, S.Pd.</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
 
-                <!-- ISTIRAHAT RABU -->
-                <tr>
-                    <td colspan="5" class="break">
-                        &#9749; ISTIRAHAT
-                    </td>
-                </tr>
+                </tbody>
 
+                <tfoot>
+                    <tr>
+                        <td colspan="5">
+                            Wali Kelas XI PPLG 2:
+                            <strong>EKA MUTIA PUTRI S.Kom</strong>
+                        </td>
+                    </tr>
+                </tfoot>
 
-                <!-- ================= KAMIS ================= -->
-
-                <tr>
-                    <td rowspan="10"><strong>Kamis</strong></td>
-                    <td rowspan="2">1 - 2</td>
-                    <td rowspan="2">06.30 - 08.00</td>
-                    <td rowspan="2">
-                        <span class="subject">B. Inggris</span>
-                    </td>
-                    <td rowspan="2">Ulfia Nur Agussetia, S.Pd.</td>
-                </tr>
-                <tr></tr>
-
-                <tr>
-                    <td rowspan="5">3 - 7</td>
-                    <td rowspan="5">08.00 - 12.05</td>
-                    <td rowspan="5">
-                        <span class="subject">Rekayasa Perangkat Lunak</span>
-                    </td>
-                    <td rowspan="5">Nurul Rahmayani, S.Pd.</td>
-                </tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-
-                <tr>
-                    <td rowspan="3">8 - 10</td>
-                    <td rowspan="3">12.35 - 14.35</td>
-                    <td rowspan="3">
-                        <span class="subject">Mapel Pilihan PPLG</span>
-                    </td>
-                    <td rowspan="3">Eka Mutia Putri, S.Kom.</td>
-                </tr>
-                <tr></tr>
-                <tr></tr>
-
-
-                <!-- ISTIRAHAT KAMIS -->
-                <tr>
-                    <td colspan="5" class="break">
-                        &#9749; ISTIRAHAT
-                    </td>
-                </tr>
-
-
-                <!-- ================= JUMAT ================= -->
-
-                <tr>
-                    <td rowspan="7"><strong>Jumat</strong></td>
-                    <td>1</td>
-                    <td>06.30 - 07.10</td>
-                    <td>
-                        <span class="subject">Pembinaan</span>
-                    </td>
-                    <td>Without teacher</td>
-                </tr>
-
-                <tr>
-                    <td rowspan="3">2 - 4</td>
-                    <td rowspan="3">07.10 - 09.10</td>
-                    <td rowspan="3">
-                        <span class="subject">B. Inggris</span>
-                    </td>
-                    <td rowspan="3">Ulfia Nur Agussetia, S.Pd.</td>
-                </tr>
-                <tr></tr>
-                <tr></tr>
-
-                <tr>
-                    <td rowspan="3">5 - 7</td>
-                    <td rowspan="3">09.30 - 11.30</td>
-                    <td rowspan="3">
-                        <span class="subject">Rekayasa Perangkat Lunak</span>
-                    </td>
-                    <td rowspan="3">Candra Apriana, S.Pd.</td>
-                </tr>
-                <tr></tr>
-                <tr></tr>
-
-            </tbody>
-
-            <tfoot>
-                <tr>
-                    <td colspan="5">
-                        Wali Kelas XI PPLG 2:
-                        <strong>EKA MUTIA PUTRI S.Kom</strong>
-                    </td>
-                </tr>
-            </tfoot>
-
-        </table>
-
+            </table>
+        </div>
     </div>
-</div>
+
     <!-- VIDEO -->
     <div class="card">
         <h2>&#127909; Showcase Media & Dokumentasi Belajar</h2>
@@ -686,65 +695,26 @@
     <div class="card">
         <h3>&#128640; Panduan Pintasan dan Struktur Kode</h3>
 
-        <h3>Pintasan Keyboard VS Code</h3>
+        <div class="panduan">
+            <p>
+                Gunakan menu navigasi untuk berpindah ke halaman
+                <a href="beranda.html">Beranda</a>,
+                <a href="profil.html">Profil Siswa</a>,
+                <a href="galeri.html">Galeri Karya</a>, dan
+                <a href="blog.html">Blog</a>.
+            </p>
 
-        <p>
-            Untuk membuka Command Palette, tekan
-            <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>P</kbd>.
-        </p>
+            <p>
+                Tombol berikut dapat digunakan untuk kembali ke bagian
+                atas halaman atau menuju agenda belajar.
+            </p>
 
-        <p>
-            Untuk menyimpan dokumen
-            <kbd>CTRL</kbd> + <kbd>S</kbd>.
-        </p>
-
-        <p>
-            Untuk membuka file
-            <kbd>CTRL</kbd> + <kbd>P</kbd>.
-        </p>
-
-        <h4>&#11088; Struktur Dasar HTML</h4>
-
-        <pre style="background-color: #222; padding: 20px; color: white;">
-        <code>&lt;!DOCTYPE html&gt;
-        &lt;html lang="id"&gt;
-        &lt;head&gt;
-            &lt;meta charset="UTF-8"&gt;
-            &lt;title&gt;Judul Halaman&lt;/title&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-            &lt;h1&gt;Hello World&lt;/h1&gt;
-        &lt;/body&gt;
-        &lt;/html&gt;</code>
-        </pre>
-
-        <h4>&#9745; Status Terminal</h4>
-
-        <p>
-            <samp>File berhasil disimpan</samp>
-        </p>
+            <p>
+                <a href="#top">&#11014; Kembali ke Atas</a>
+                <a href="#info-kegiatan">&#128187; Ke Agenda Belajar</a>
+            </p>
+        </div>
     </div>
-
-    <!-- NAVIGASI BAWAH -->
-    <div class="card">
-        <p>
-            <a href="#info-kegiatan">Lompat ke Info Kegiatan</a>
-        </p>
-
-        <p>
-            <a href="#top">Kembali ke atas</a>
-        </p>
-    </div>
-
-    <hr>
-
-    <!-- FOOTER -->
-    <p style="text-align: right;">
-        &copy; 2026 Dibuat oleh
-        <b>SATRIA PUTRA ANUGRAH</b> -
-        <b>KELAS XI PPLG 2</b> -
-        <b>SMKN 4 KUNINGAN</b>
-    </p>
 
 </body>
 </html>
