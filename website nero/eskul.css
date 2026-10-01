@@ -257,3 +257,358 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* =========================================
+   RESPONSIVE TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    #ekstrakurikuler {
+        padding: 50px 25px;
+    }
+
+    #ekstrakurikuler h1 {
+        font-size: 32px;
+    }
+
+    .eskul-intro {
+        font-size: 16px;
+
+        line-height: 1.7;
+
+        margin-bottom: 35px;
+    }
+
+    .ekstrakurikuler-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .ekstrakurikuler-card > img {
+        height: 210px;
+    }
+
+    .ekstrakurikuler-card-content {
+        padding: 20px;
+    }
+
+    .ekstrakurikuler-card-content h2 {
+        font-size: 22px;
+    }
+
+    .ekstrakurikuler-card-content p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .eskul-detail-btn {
+        padding: 10px 16px;
+
+        font-size: 13px;
+    }
+
+    .kembali-btn {
+        margin-top: 35px;
+    }
+
+    footer {
+        padding: 25px 20px;
+
+        margin-top: 40px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE HP
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* Mencegah halaman bergeser ke samping */
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================
+       SECTION UTAMA
+       ===================================== */
+
+    #ekstrakurikuler {
+        width: 100%;
+
+        padding: 40px 15px;
+    }
+
+
+    /* =====================================
+       JUDUL
+       ===================================== */
+
+    #ekstrakurikuler h1 {
+        font-size: 26px;
+
+        line-height: 1.3;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* =====================================
+       DESKRIPSI
+       ===================================== */
+
+    .eskul-intro {
+        width: 100%;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        margin-bottom: 30px;
+    }
+
+
+    /* =====================================
+       CONTAINER
+       ===================================== */
+
+    .ekstrakurikuler-container {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        width: 100%;
+    }
+
+
+    /* =====================================
+       CARD
+       ===================================== */
+
+    .ekstrakurikuler-card {
+        width: 100%;
+
+        border-radius: 13px;
+    }
+
+
+    .ekstrakurikuler-card:hover {
+        transform: translateY(-4px);
+    }
+
+
+    /* =====================================
+       GAMBAR
+       ===================================== */
+
+    .ekstrakurikuler-card > img {
+        width: 100%;
+
+        height: 220px;
+
+        object-fit: cover;
+    }
+
+
+    /* =====================================
+       ISI CARD
+       ===================================== */
+
+    .ekstrakurikuler-card-content {
+        padding: 18px 16px;
+    }
+
+
+    /* =====================================
+       JUDUL CARD
+       ===================================== */
+
+    .ekstrakurikuler-card-content h2 {
+        font-size: 21px;
+
+        margin-bottom: 10px;
+    }
+
+
+    /* =====================================
+       DESKRIPSI CARD
+       ===================================== */
+
+    .ekstrakurikuler-card-content p {
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        margin-bottom: 18px;
+    }
+
+
+    /* =====================================
+       TOMBOL DETAIL
+       ===================================== */
+
+    .eskul-detail-btn {
+        width: fit-content;
+
+        padding: 10px 16px;
+
+        font-size: 13px;
+
+        border-radius: 7px;
+    }
+
+
+    /* =====================================
+       TOMBOL KEMBALI
+       ===================================== */
+
+    .kembali-btn {
+        width: calc(100% - 40px);
+
+        max-width: 260px;
+
+        text-align: center;
+
+        margin: 10px auto 0;
+
+        padding: 12px 20px;
+
+        font-size: 14px;
+    }
+
+
+    /* =====================================
+       FOOTER
+       ===================================== */
+
+    footer {
+        width: 100%;
+
+        padding: 25px 15px;
+
+        margin-top: 35px;
+    }
+
+    footer p {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================================
+   HP KECIL
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    #ekstrakurikuler {
+        padding: 35px 12px;
+    }
+
+
+    /* Judul */
+
+    #ekstrakurikuler h1 {
+        font-size: 23px;
+    }
+
+
+    /* Deskripsi */
+
+    .eskul-intro {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* Jarak card */
+
+    .ekstrakurikuler-container {
+        gap: 16px;
+    }
+
+
+    /* Card */
+
+    .ekstrakurikuler-card {
+        border-radius: 11px;
+    }
+
+
+    /* Gambar */
+
+    .ekstrakurikuler-card > img {
+        height: 190px;
+    }
+
+
+    /* Isi */
+
+    .ekstrakurikuler-card-content {
+        padding: 16px 14px;
+    }
+
+
+    /* Judul */
+
+    .ekstrakurikuler-card-content h2 {
+        font-size: 19px;
+
+        margin-bottom: 8px;
+    }
+
+
+    /* Deskripsi */
+
+    .ekstrakurikuler-card-content p {
+        font-size: 13px;
+
+        line-height: 1.6;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* Tombol detail */
+
+    .eskul-detail-btn {
+        padding: 9px 14px;
+
+        font-size: 12px;
+    }
+
+
+    /* Tombol kembali */
+
+    .kembali-btn {
+        width: calc(100% - 30px);
+
+        font-size: 13px;
+
+        padding: 11px 15px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 20px 12px;
+
+        margin-top: 30px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}

@@ -54,3 +54,316 @@
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* =========================================
+   RESPONSIVE TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .detail-eskul {
+        width: calc(100% - 50px);
+
+        margin: 40px auto;
+
+        padding: 25px;
+
+        border-radius: 14px;
+    }
+
+    .detail-eskul h1 {
+        font-size: 30px;
+
+        line-height: 1.3;
+
+        margin-bottom: 25px;
+    }
+
+    .detail-eskul h2 {
+        font-size: 22px;
+
+        margin-top: 25px;
+    }
+
+    .detail-eskul p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+    .detail-eskul-img {
+        height: 300px;
+
+        margin-bottom: 25px;
+    }
+
+    .detail-eskul ul {
+        padding-left: 25px;
+    }
+
+    .detail-eskul li {
+        font-size: 15px;
+
+        margin-bottom: 8px;
+    }
+
+    .kembali-btn {
+        margin-top: 30px;
+
+        padding: 11px 18px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE HP
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================
+       CONTAINER
+       ===================================== */
+
+    .detail-eskul {
+        width: calc(100% - 30px);
+
+        margin: 25px auto 30px;
+
+        padding: 20px 17px;
+
+        border-radius: 12px;
+
+        box-shadow:
+            0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+
+    /* =====================================
+       JUDUL UTAMA
+       ===================================== */
+
+    .detail-eskul h1 {
+        font-size: 25px;
+
+        line-height: 1.3;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =====================================
+       GAMBAR
+       ===================================== */
+
+    .detail-eskul-img {
+        width: 100%;
+
+        height: 220px;
+
+        object-fit: cover;
+
+        margin: 0 auto 25px;
+
+        border-radius: 10px;
+    }
+
+
+    /* =====================================
+       JUDUL SECTION
+       ===================================== */
+
+    .detail-eskul h2 {
+        font-size: 20px;
+
+        line-height: 1.4;
+
+        margin-top: 25px;
+
+        margin-bottom: 10px;
+
+        color: #1a73e8;
+    }
+
+
+    /* =====================================
+       PARAGRAF
+       ===================================== */
+
+    .detail-eskul p {
+        font-size: 14px;
+
+        line-height: 1.8;
+
+        text-align: left;
+    }
+
+
+    /* =====================================
+       DAFTAR
+       ===================================== */
+
+    .detail-eskul ul {
+        padding-left: 22px;
+
+        margin-top: 10px;
+    }
+
+    .detail-eskul li {
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        margin-bottom: 8px;
+
+        padding-left: 3px;
+    }
+
+
+    /* =====================================
+       TOMBOL KEMBALI
+       ===================================== */
+
+    .kembali-btn {
+        width: calc(100% - 20px);
+
+        max-width: 280px;
+
+        text-align: center;
+
+        margin: 30px auto 0;
+
+        padding: 11px 15px;
+
+        font-size: 13px;
+
+        border-radius: 7px;
+    }
+
+
+    /* =====================================
+       FOOTER
+       ===================================== */
+
+    footer {
+        width: 100%;
+
+        background-color: #126bb5;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 25px 15px;
+
+        margin-top: 30px;
+    }
+
+    footer p {
+        margin: 0;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================================
+   HP KECIL
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .detail-eskul {
+        width: calc(100% - 24px);
+
+        margin: 20px auto 25px;
+
+        padding: 17px 14px;
+    }
+
+
+    /* Judul */
+
+    .detail-eskul h1 {
+        font-size: 22px;
+
+        margin-bottom: 17px;
+    }
+
+
+    /* Gambar */
+
+    .detail-eskul-img {
+        height: 190px;
+
+        border-radius: 8px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* Heading */
+
+    .detail-eskul h2 {
+        font-size: 18px;
+
+        margin-top: 22px;
+    }
+
+
+    /* Paragraf */
+
+    .detail-eskul p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* List */
+
+    .detail-eskul ul {
+        padding-left: 20px;
+    }
+
+    .detail-eskul li {
+        font-size: 13px;
+
+        line-height: 1.6;
+
+        margin-bottom: 7px;
+    }
+
+
+    /* Tombol */
+
+    .kembali-btn {
+        width: calc(100% - 10px);
+
+        font-size: 12px;
+
+        padding: 10px 12px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 20px 12px;
+
+        margin-top: 25px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
