@@ -238,6 +238,109 @@
         .panduan a:hover {
             text-decoration: underline;
         }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        iframe,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        table {
+            max-width: 100%;
+        }
+
+        .tabel-responsif {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        nav {
+            max-width: 100%;
+        }
+
+        nav a {
+            display: inline-block;
+        }
+
+
+        @media screen and (max-width: 768px) {
+
+            body {
+                margin: 10px;
+                padding: 0;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .card {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            table {
+                min-width: 600px;
+            }
+
+            iframe {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+
+        @media screen and (max-width: 480px) {
+
+            body {
+                margin: 8px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            .card {
+                padding: 12px;
+                border-radius: 10px;
+            }
+
+            nav a {
+                display: block;
+                margin: 6px 0;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
     </style>
 </head>
 
@@ -346,7 +449,7 @@
     <div class="card">
         <h2>&#128197; Jadwal Pelajaran XI PPLG 2</h2>
 
-        <div class="table-card">
+        <div class="table-responsif">
 
             <table class="schedule-table">
 

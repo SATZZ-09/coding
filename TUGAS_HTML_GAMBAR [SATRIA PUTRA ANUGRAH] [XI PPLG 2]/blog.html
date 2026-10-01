@@ -52,6 +52,14 @@
             margin: 0 0 15px;
         }
 
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
         nav a {
             color: #ffffff;
             margin: 0 10px;
@@ -192,6 +200,102 @@
 
         .area-komentar button:hover {
             opacity: 0.8;
+        }
+
+        
+        @media screen and (max-width: 768px) {
+
+            #konten-utama {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            #konten-utama article {
+                width: 100%;
+                flex: none;
+            }
+
+            #sidebar-blog {
+                width: 100%;
+                flex: none;
+                float: none;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .foto-jurnal img {
+                max-width: 100%;
+            }
+
+        }
+
+
+        @media screen and (max-width: 480px) {
+
+            body {
+                font-size: 14px;
+            }
+
+            #header-blog,
+            #footer-blog {
+                padding: 15px;
+            }
+
+            #header-blog h1 {
+                font-size: 24px;
+            }
+
+            #konten-utama {
+                margin: 15px auto;
+                padding: 0 10px;
+            }
+
+            #konten-utama article {
+                padding: 15px;
+            }
+
+
+            nav {
+                flex-direction: column;
+                width: 100%;
+                gap: 5px;
+            }
+
+            nav a {
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                margin: 4px auto;
+                padding: 10px;
+                background-color: #343a40;
+                border-radius: 8px;
+            }
+
+            nav a.active {
+                border-bottom: none;
+                background-color: #006EF0;
+                color: #ffffff;
+            }
+
+            .babak-cerita {
+                padding: 12px;
+            }
+
+            .widget {
+                padding: 15px;
+            }
+
+            .area-komentar {
+                padding: 15px;
+            }
+
         }
 
     </style>
