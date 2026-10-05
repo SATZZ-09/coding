@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,40 +18,142 @@
         href="https://www.smkn4kuningan.sch.id/favicon-16x16.png">
 
     <style>
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: #f1f5f9;
             color: #333;
-            margin: 20px;
+            margin: 0;
             font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* HEADER  */
+
+        .header {
+            background-color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 3px solid #006EF0;
+        }
+
+        .header img {
+            width: 125px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            color: #006EF0;
+            margin: 5px 0;
+            font-size: 30px;
+        }
+
+        .header p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        /* NAVIGASI */
+
+        nav {
+            background-color: white;
+            text-align: center;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 4px;
+            padding: 9px 15px;
+            background-color: #006EF0;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover {
+            background-color: #005AC8;
+        }
+
+        nav a.active {
+            background-color: #005AC8;
+            font-weight: bold;
+        }
+
+        /* MAIN */
+
+        main {
+            width: 92%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+        /* CARD */
+
+        .card {
+            border: 1px solid #ddd;
+            padding: 22px;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 9px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+            transition: 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: #c7d8ee;
+            box-shadow: 0 5px 14px rgba(0, 0, 0, 0.09);
+        }
+
+        .card h2 {
+            color: #006EF0;
+            margin-top: 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e8f0fe;
+        }
+
+        .card h3 {
+            color: #006EF0;
         }
 
         .card {
             border: 1px solid #ddd;
-            padding: 20px;
+            padding: 22px;
             margin-bottom: 20px;
             background-color: white;
-            border-radius: 12px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 9px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
         }
+
+        /* TEKS */
 
         .highlight {
             background-color: #fff3cd;
             color: #006EF0;
             padding: 3px 6px;
-            border-radius: 5px;
+            border-radius: 4px;
             font-weight: bold;
         }
 
         .badge {
+            display: inline-block;
             background-color: #e3f2fd;
             color: #1565c0;
             padding: 4px 8px;
-            border-radius: 10px;
+            border-radius: 6px;
             font-weight: bold;
         }
 
@@ -59,13 +162,90 @@
             font-weight: bold;
         }
 
+        /* DATA SISWA */
+
+        .data-siswa {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .data-item {
+            background-color: #f8fafc;
+            padding: 12px;
+            border-left: 4px solid #006EF0;
+        }
+
+        /* SKILL */
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background-color: #e3f2fd;
+            color: #1565c0;
+            padding: 8px 13px;
+            border: 1px solid #c5ddf5;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* PROJECT */
+
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .project {
+            background-color: #f8fafc;
+            border: 1px solid #ddd;
+            padding: 17px;
+            border-radius: 7px;
+        }
+
+        .project h3 {
+            margin-top: 0;
+        }
+
+        .project:hover {
+            border-color: #006EF0;
+        }
+
+        /* STATISTIK */
+
+        .stat-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .stat {
+            background-color: #f8fafc;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            border-radius: 7px;
+        }
+
+        .stat strong {
+            display: block;
+            color: #006EF0;
+            font-size: 24px;
+        }
+
+        /* VIDEO & AUDIO */
+
         .video-box,
         .audio-box {
             background-color: #f8fafc;
             padding: 15px;
             border: 1px solid #ddd;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+            border-radius: 8px;
         }
 
         .video-box video,
@@ -81,69 +261,26 @@
             text-align: center;
         }
 
-        nav {
-            text-align: center;
-        }
-
-        nav a {
-            display: inline-block;
-            margin: 5px;
-            padding: 10px 15px;
-            background-color: #006EF0;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: 0.2s ease;
-        }
-
-        nav a.active {
-            background-color: #006EF0;
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 0 0 2px #006EF0;
-        }
-
-        nav a:hover {
-            background-color: #005AC8;
-        }
-
-        .card p a[href="#info-kegiatan"],
-        .card p a[href="#top"] {
-            display: inline-block;
-            margin: 5px;
-            padding: 10px 15px;
-            background-color: #006EF0;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: 0.2s ease;
-        }
-
-        .card p a[href="#info-kegiatan"]:hover,
-        .card p a[href="#top"]:hover {
-            background-color: #005AC8;
-        }
+        /* TABEL */
 
         .table-card {
             width: 100%;
             overflow-x: auto;
             background-color: white;
-            padding: 15px;
-            border-radius: 12px;
-            box-sizing: border-box;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
         }
 
         .schedule-table {
             width: 100%;
+            min-width: 750px;
             border-collapse: collapse;
-            border: 1px solid #d6dce5;
             font-family: Arial, sans-serif;
             background-color: white;
         }
 
         .schedule-table caption {
-            caption-side: top;
             padding: 15px;
             font-size: 20px;
             font-weight: bold;
@@ -153,7 +290,7 @@
         .schedule-table th,
         .schedule-table td {
             border: 1px solid #d6dce5;
-            padding: 12px 10px;
+            padding: 10px;
             text-align: center;
             vertical-align: middle;
         }
@@ -161,7 +298,6 @@
         .schedule-table thead th {
             background-color: #006EF0;
             color: white;
-            font-weight: bold;
         }
 
         .schedule-table tbody td:first-child {
@@ -176,15 +312,14 @@
 
         .schedule-table tbody tr:hover {
             background-color: #e8f0fe;
-            transition: 0.2s ease;
         }
 
         .subject {
             display: inline-block;
             background-color: #e3f2fd;
             color: #1565c0;
-            padding: 6px 10px;
-            border-radius: 15px;
+            padding: 5px 9px;
+            border-radius: 6px;
             font-weight: bold;
         }
 
@@ -192,9 +327,8 @@
             display: inline-block;
             background-color: #e3f2fd;
             color: #1565c0;
-            padding: 6px 10px;
-            border-radius: 15px;
-            font-weight: bold;
+            padding: 5px 9px;
+            border-radius: 6px;
         }
 
         .schedule-table .break {
@@ -202,7 +336,7 @@
             color: #856404;
             font-weight: bold;
             text-align: center;
-            padding: 12px;
+            padding: 11px;
         }
 
         .schedule-table tfoot td {
@@ -210,23 +344,24 @@
             color: #333;
             font-weight: bold;
             text-align: center;
-            padding: 15px;
+            padding: 14px;
         }
 
         .schedule-note {
             margin-top: 15px;
             padding: 12px 15px;
             background-color: #f1f6ff;
-            border-left: 5px solid #006EF0;
-            border-radius: 6px;
-            color: #444;
+            border-left: 4px solid #006EF0;
+            border-radius: 5px;
         }
 
         /* PANDUAN */
+
         .panduan {
             background-color: #f8fafc;
             padding: 15px;
-            border-radius: 8px;
+            border-left: 4px solid #006EF0;
+            border-radius: 5px;
         }
 
         .panduan a {
@@ -239,633 +374,1243 @@
             text-decoration: underline;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+        /* CODE */
 
-        iframe,
-        video {
-            max-width: 100%;
-            height: auto;
-        }
-
-        table {
-            max-width: 100%;
-        }
-
-        .tabel-card {
-            width: 100%;
+        pre {
+            background-color: #222;
+            color: white;
+            padding: 18px;
+            border-radius: 6px;
             overflow-x: auto;
         }
 
-        nav {
-            max-width: 100%;
+        kbd {
+            background-color: #222;
+            color: white;
+            padding: 4px 7px;
+            border-radius: 4px;
+            font-weight: bold;
         }
 
-        nav a {
+        /* LINK TOMBOL */
+
+        .button-link {
             display: inline-block;
+            margin: 5px;
+            padding: 9px 15px;
+            background-color: #006EF0;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
         }
 
+        .button-link:hover {
+            background-color: #005AC8;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
 
         @media screen and (max-width: 768px) {
 
-            body {
-                margin: 10px;
-                padding: 0;
+            main {
+                width: 94%;
             }
 
-            h1 {
-                font-size: 28px;
+            .header h1 {
+                font-size: 27px;
             }
 
-            h2 {
-                font-size: 22px;
+            .data-siswa,
+            .project-list,
+            .stat-list {
+                grid-template-columns: 1fr;
             }
 
             .card {
-                padding: 15px;
-                margin: 15px 0;
-            }
-
-            nav {
-                text-align: center;
+                padding: 17px;
             }
 
             nav a {
-                margin: 5px;
-            }
-
-            table {
-                min-width: 600px;
-            }
-
-            iframe {
-                width: 100%;
-                max-width: 100%;
+                margin: 3px;
             }
         }
-
 
         @media screen and (max-width: 480px) {
 
             body {
-                margin: 8px;
                 font-size: 14px;
             }
 
-            h1 {
-                font-size: 24px;
+            .header {
+                padding: 25px 12px;
             }
 
-            h2 {
-                font-size: 20px;
+            .header h1 {
+                font-size: 23px;
             }
 
-            h3 {
-                font-size: 18px;
+            .header img {
+                width: 105px;
+            }
+
+            main {
+                width: 95%;
             }
 
             .card {
-                padding: 12px;
-                border-radius: 10px;
+                padding: 13px;
+                border-radius: 7px;
             }
 
             nav a {
                 display: block;
-                margin: 6px 0;
+                margin: 5px 0;
             }
 
-            img {
-                max-width: 100%;
-                height: auto;
+            .skill-list {
+                gap: 7px;
             }
 
             pre {
-              font-size: 12px;
-              white-space: pre-wrap;
-              overflow-wrap: break-word;
+                font-size: 12px;
+                white-space: pre-wrap;
+                overflow-wrap: break-word;
             }
         }
+
     </style>
 </head>
 
 <body id="top">
 
-    <!-- LOGO SEKOLAH -->
-    <div style="text-align: center;">
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
         <a href="https://smkn4kuningan.sch.id" target="_blank">
+
             <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-QwSTyiqAFYREpajq7vtpYxCvIY4Ld6sYv-0xsaN-lg&s=10"
-                alt="Logo SMKN 4 Kuningan"
-                style="width: 140px; height: auto;">
-        </a>
-    </div>
+                alt="Logo SMKN 4 Kuningan">
 
-    <!-- HEADER -->
-    <div class="card">
-        <h1 style="text-align: center; color: #006EF0;">
+        </a>
+
+        <h1>
             &#128075; PORTAL SISWA SATRIA PUTRA ANUGRAH
         </h1>
 
-        <p style="text-align: center;">
+        <p>
             Selamat datang di website portofolio saya.
         </p>
-    </div>
-
-    <hr>
-
-    <!-- NAVIGASI -->
-    <div class="card">
-        <h2>Menu Navigasi</h2>
-
-        <nav>
-            <a href="beranda.html" class="active">Beranda</a>
-            <a href="profil.html">Profil Siswa</a>
-            <a href="galeri.html">Galeri Karya</a>
-            <a href="blog.html">Blog</a>
-        </nav>
-    </div>
-
-    <!-- DATA SISWA -->
-    <div class="card">
-        <h2>&#128100; Data Siswa</h2>
 
         <p>
-            <b>NAMA:</b>
-            <span class="highlight">SATRIA PUTRA ANUGRAH</span>
+            <b>XI PPLG 2 - SMKN 4 KUNINGAN</b>
         </p>
 
-        <p>
-            <b>KELAS:</b>
-            <span class="badge">XI PPLG 2</span>
-        </p>
+    </header>
 
-        <p>
-            <b>SEKOLAH:</b>
-            <span class="keyword">SMKN 4 KUNINGAN</span>
-        </p>
-    </div>
 
-    <!-- KONTEN UTAMA -->
-    <div class="card">
-        <h2>&#127979; Pengalaman Belajar PPLG</h2>
+    <!-- ================= NAVIGASI ================= -->
 
-        <p>
-            Saya belajar di jurusan
-            <span class="highlight">PPLG SMKN 4 KUNINGAN</span>.
-            Selama saya belajar, saya mempelajari berbagai materi
-            tentang pemrograman dan pembuatan website.
-        </p>
+    <nav>
 
-        <p>
-            Saya merasa senang karena dapat belajar hal baru dalam dunia
-            teknologi. <span class="badge">Belajar HTML</span> membantu
-            saya memahami cara membuat struktur halaman website.
-        </p>
+        <a href="beranda.html" class="active">
+            &#127968; Beranda
+        </a>
 
-        <p>
-            Saya ingin terus meningkatkan kemampuan
-            <span class="keyword">coding</span> saya.
-        </p>
-    </div>
+        <a href="profil.html">
+            &#128100; Profil Siswa
+        </a>
 
-    <!-- RINGKASAN MATERI -->
-    <div class="card">
-        <h2>&#128218; Ringkasan Materi</h2>
+        <a href="galeri.html">
+            &#128444; Galeri Karya
+        </a>
 
-        <p>
-            Pada materi HTML, kita mempelajari berbagai tag untuk membuat
-            struktur sebuah halaman web.
-        </p>
+        <a href="blog.html">
+            &#128221; Blog
+        </a>
 
-        <p>
-            Salah satu materi yang dipelajari adalah penggunaan elemen
-            <code>&lt;img&gt;</code> untuk menampilkan gambar pada halaman website.
-        </p>
+    </nav>
 
-        <p>
-            <span class="highlight">HTML</span> digunakan untuk membuat struktur
-            halaman, sedangkan <span class="badge">CSS</span> digunakan untuk
-            mengatur tampilan agar halaman menjadi lebih menarik dan rapi.
-        </p>
-    </div>
 
-    <!-- JADWAL PELAJARAN -->
-    <div class="card">
-        <h2>&#128197; Jadwal Pelajaran XI PPLG 2</h2>
+    <main>
 
-        <div class="table-card">
+        <!-- ================= DATA SISWA ================= -->
 
-            <table class="schedule-table">
+        <section class="card">
 
-                <caption>
-                    Jadwal Pelajaran XI PPLG 2 - Semester Gasal 2026/2027
-                </caption>
+            <h2>&#128100; Data Siswa</h2>
 
-                <colgroup>
-                    <col style="width: 12%; background-color: #e8f0fe;">
-                    <col style="width: 10%; background-color: #e8f0fe;">
-                    <col style="width: 18%; background-color: #e8f0fe;">
-                    <col style="width: 30%;">
-                    <col style="width: 30%;">
-                </colgroup>
+            <div class="data-siswa">
 
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Ke</th>
-                        <th>Waktu</th>
-                        <th>Mata Pelajaran</th>
-                        <th>Guru</th>
-                    </tr>
-                </thead>
+                <div class="data-item">
 
-                <tbody>
+                    <b>Nama</b><br>
 
-                    <!-- SENIN -->
-                    <tr>
-                        <td rowspan="11"><strong>Senin</strong></td>
-                        <td>1</td>
-                        <td>06.30 - 07.15</td>
-                        <td><span class="subject">Upacara</span></td>
-                        <td>Without teacher</td>
-                    </tr>
+                    <span class="highlight">
+                        Satria Putra Anugrah
+                    </span>
 
-                    <tr>
-                        <td rowspan="4">2 - 5</td>
-                        <td rowspan="4">07.15 - 09.30</td>
-                        <td rowspan="4">
-                            <span class="subject">Rekayasa Perangkat Lunak</span>
-                        </td>
-                        <td rowspan="4">Eka Mutia Putri, S.Kom.</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
+                </div>
 
-                    <tr>
-                        <td rowspan="2">6 - 7</td>
-                        <td rowspan="2">10.35 - 12.05</td>
-                        <td rowspan="2">
-                            <span class="subject">Penjasorkes</span>
-                        </td>
-                        <td rowspan="2">Abdul Husen, S.Pd.</td>
-                    </tr>
-                    <tr></tr>
 
-                    <tr>
-                        <td rowspan="2">8 - 9</td>
-                        <td rowspan="2">12.35 - 13.55</td>
-                        <td rowspan="2">
-                            <span class="subject">B. Inggris</span>
-                        </td>
-                        <td rowspan="2">Ulfia Nur Agussetia, S.Pd.</td>
-                    </tr>
-                    <tr></tr>
+                <div class="data-item">
 
-                    <tr>
-                        <td rowspan="2">10 - 11</td>
-                        <td rowspan="2">13.55 - 15.15</td>
-                        <td rowspan="2">
-                            <span class="subject">Bahasa Sunda</span>
-                        </td>
-                        <td rowspan="2">Ade Gumelar, S.Pd.</td>
-                    </tr>
-                    <tr></tr>
+                    <b>Kelas</b><br>
 
-                    <tr>
-                        <td colspan="5" class="break">
-                            &#9749; ISTIRAHAT
-                        </td>
-                    </tr>
+                    <span class="badge">
+                        XI PPLG 2
+                    </span>
 
-                    <!-- SELASA -->
-                    <tr>
-                        <td rowspan="10"><strong>Selasa</strong></td>
-                        <td rowspan="3">1 - 3</td>
-                        <td rowspan="3">06.30 - 08.45</td>
-                        <td rowspan="3">
-                            <span class="subject">PAIBP</span>
-                        </td>
-                        <td rowspan="3">Maman Lukmanul Hakim, S.Pd.</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
+                </div>
 
-                    <tr>
-                        <td rowspan="2">4 - 5</td>
-                        <td rowspan="2">08.45 - 10.35</td>
-                        <td rowspan="2">
-                            <span class="subject">Sejarah</span>
-                        </td>
-                        <td rowspan="2">Roni Purnama, S.Pd.</td>
-                    </tr>
-                    <tr></tr>
 
-                    <tr>
-                        <td rowspan="2">6 - 7</td>
-                        <td rowspan="2">10.35 - 12.05</td>
-                        <td rowspan="2">
-                            <span class="subject">Rekayasa Perangkat Lunak</span>
-                        </td>
-                        <td rowspan="2">Candra Apriana, S.Pd.</td>
-                    </tr>
-                    <tr></tr>
+                <div class="data-item">
 
-                    <tr>
-                        <td rowspan="3">8 - 10</td>
-                        <td rowspan="3">12.35 - 14.35</td>
-                        <td rowspan="3">
-                            <span class="subject">Rekayasa Perangkat Lunak</span>
-                        </td>
-                        <td rowspan="3">Nurul Rahmayani, S.Pd.</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
+                    <b>Sekolah</b><br>
 
-                    <tr>
-                        <td colspan="5" class="break">
-                            &#9749; ISTIRAHAT
-                        </td>
-                    </tr>
+                    <span class="keyword">
+                        SMKN 4 KUNINGAN
+                    </span>
 
-                    <!-- RABU -->
-                    <tr>
-                        <td rowspan="11"><strong>Rabu</strong></td>
-                        <td rowspan="5">1 - 5</td>
-                        <td rowspan="5">06.30 - 09.10</td>
-                        <td rowspan="5">
-                            <span class="subject">KIK</span>
-                        </td>
-                        <td rowspan="5">Teguh Saputra, S.Pd.</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
+                </div>
 
-                    <tr>
-                        <td rowspan="3">6 - 8</td>
-                        <td rowspan="3">10.10 - 12.10</td>
-                        <td rowspan="3">
-                            <span class="subject">Matematika</span>
-                        </td>
-                        <td rowspan="3">Euis Herawati, S.Pd.</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
 
-                    <tr>
-                        <td rowspan="3">9 - 11</td>
-                        <td rowspan="3">12.40 - 14.40</td>
-                        <td rowspan="3">
-                            <span class="subject">Rekayasa Perangkat Lunak</span>
-                        </td>
-                        <td rowspan="3">Esa Daniarsa, S.Kom.</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
+                <div class="data-item">
 
-                    <tr>
-                        <td colspan="5" class="break">
-                            &#9749; ISTIRAHAT
-                        </td>
-                    </tr>
+                    <b>Jurusan</b><br>
 
-                    <!-- KAMIS -->
-                    <tr>
-                        <td rowspan="10"><strong>Kamis</strong></td>
-                        <td rowspan="2">1 - 2</td>
-                        <td rowspan="2">06.30 - 08.00</td>
-                        <td rowspan="2">
-                            <span class="subject">B. Inggris</span>
-                        </td>
-                        <td rowspan="2">Ulfia Nur Agussetia, S.Pd.</td>
-                    </tr>
-                    <tr></tr>
+                    <span class="badge">
+                        PPLG
+                    </span>
 
-                    <tr>
-                        <td rowspan="5">3 - 7</td>
-                        <td rowspan="5">08.00 - 12.05</td>
-                        <td rowspan="5">
-                            <span class="subject">Rekayasa Perangkat Lunak</span>
-                        </td>
-                        <td rowspan="5">Nurul Rahmayani, S.Pd.</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
+                </div>
 
-                    <tr>
-                        <td rowspan="3">8 - 10</td>
-                        <td rowspan="3">12.35 - 14.35</td>
-                        <td rowspan="3">
-                            <span class="subject">Mapel Pilihan PPLG</span>
-                        </td>
-                        <td rowspan="3">Eka Mutia Putri, S.Kom.</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
+            </div>
 
-                    <tr>
-                        <td colspan="5" class="break">
-                            &#9749; ISTIRAHAT
-                        </td>
-                    </tr>
+        </section>
 
-                    <!-- JUMAT -->
-                    <tr>
-                        <td rowspan="7"><strong>Jumat</strong></td>
-                        <td>1</td>
-                        <td>06.30 - 07.10</td>
-                        <td>
-                            <span class="subject">Pembinaan</span>
-                        </td>
-                        <td>Without teacher</td>
-                    </tr>
 
-                    <tr>
-                        <td rowspan="3">2 - 4</td>
-                        <td rowspan="3">07.10 - 09.10</td>
-                        <td rowspan="3">
-                            <span class="subject">B. Inggris</span>
-                        </td>
-                        <td rowspan="3">Ulfia Nur Agussetia, S.Pd.</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
+        <!-- ================= PENGALAMAN ================= -->
 
-                    <tr>
-                        <td rowspan="3">5 - 7</td>
-                        <td rowspan="3">09.30 - 11.30</td>
-                        <td rowspan="3">
-                            <span class="subject">Rekayasa Perangkat Lunak</span>
-                        </td>
-                        <td rowspan="3">Candra Apriana, S.Pd.</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
+        <section class="card">
 
-                </tbody>
-
-                <tfoot>
-                    <tr>
-                        <td colspan="5">
-                            Wali Kelas XI PPLG 2:
-                            <strong>EKA MUTIA PUTRI S.Kom</strong>
-                        </td>
-                    </tr>
-                </tfoot>
-
-            </table>
-        </div>
-    </div>
-
-    <!-- VIDEO -->
-    <div class="card">
-        <h2>&#127909; Showcase Media & Dokumentasi Belajar</h2>
-
-        <p>
-            Berikut adalah video sebagai media pembelajaran dan
-            dokumentasi multimedia pada portofolio saya.
-        </p>
-
-        <div class="video-box">
-
-            <video
-                controls
-                muted
-                width="100%"
-                poster="https://vjs.zencdn.net/v/oceans.png">
-
-                <source
-                    src="https://vjs.zencdn.net/v/oceans.mp4"
-                    type="video/mp4">
-
-                Browser Anda tidak mendukung tag video HTML5.
-            </video>
+            <h2>&#127891; Pengalaman Belajar PPLG</h2>
 
             <p>
-                Video Ocean sebagai contoh penggunaan elemen
-                <code>&lt;video&gt;</code> dalam HTML.
+
+                Saya belajar di jurusan
+                <span class="highlight">
+                    PPLG SMKN 4 KUNINGAN
+                </span>.
+
+                Selama saya belajar, saya mempelajari berbagai materi
+                tentang pemrograman dan pembuatan website.
+
             </p>
 
-        </div>
-    </div>
-
-    <!-- AUDIO -->
-    <div class="card">
-        <h2>&#127925; Media Audio & Suara Pembelajaran</h2>
-
-        <p>
-            Berikut adalah pemutar audio sebagai tambahan media
-            pembelajaran pada website portofolio saya.
-        </p>
-
-        <div class="audio-box">
-
-            <audio controls>
-                <source
-                    src="https://www.w3schools.com/html/horse.mp3"
-                    type="audio/mpeg">
-
-                <source
-                    src="https://www.w3schools.com/html/horse.ogg"
-                    type="audio/ogg">
-
-                Browser Anda tidak mendukung tag audio HTML5.
-            </audio>
 
             <p>
-                Audio ini merupakan contoh penggunaan elemen
-                <code>&lt;audio&gt;</code> dalam HTML.
+
+                Saya merasa senang karena dapat belajar hal baru
+                dalam dunia teknologi.
+
+                <span class="badge">
+                    Belajar HTML
+                </span>
+
+                membantu saya memahami cara membuat struktur
+                halaman website.
+
             </p>
 
-        </div>
-    </div>
-
-    <!-- AGENDA -->
-    <div class="card">
-        <h3 id="info-kegiatan">
-            &#128187; Agenda Belajar Lab
-        </h3>
-
-        <ol>
-            <li>Heading dan Paragraf</li>
-            <li>HTML list dan link</li>
-            <li>Style dan HEX Color</li>
-        </ol>
-    </div>
-
-    <!-- PANDUAN -->
-    <div class="card">
-        <h3>&#128640; Panduan Pintasan dan Struktur Kode</h3>
-
-        <h3>Pintasan Keyboard VS Code</h3>
-
-        <p>
-            Untuk membuka Command Palette, tekan
-            <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>P</kbd>.
-        </p>
-
-        <p>
-            Untuk menyimpan dokumen
-            <kbd>CTRL</kbd> + <kbd>S</kbd>.
-        </p>
-
-        <p>
-            Untuk membuka file
-            <kbd>CTRL</kbd> + <kbd>P</kbd>.
-        </p>
-
-        <h4>&#11088; Struktur Dasar HTML</h4>
-
-        <pre style="background-color: #222; padding: 20px; color: white;">
-        <code>&lt;!DOCTYPE html&gt;
-        &lt;html lang="id"&gt;
-        &lt;head&gt;
-            &lt;meta charset="UTF-8"&gt;
-            &lt;title&gt;Judul Halaman&lt;/title&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-            &lt;h1&gt;Hello World&lt;/h1&gt;
-        &lt;/body&gt;
-        &lt;/html&gt;</code>
-        </pre>
-
-        <h4>&#9745; Status Terminal</h4>
-
-        <p>
-            <samp>File berhasil disimpan</samp>
-        </p>
-    </div>
-
-    <!-- PANDUAN -->
-    <div class="card">
-        <h3>&#128640; Panduan Pintasan dan Struktur Kode</h3>
-
-        <div class="panduan">
-            <p>
-                Gunakan menu navigasi untuk berpindah ke halaman
-                <a href="beranda.html">Beranda</a>,
-                <a href="profil.html">Profil Siswa</a>,
-                <a href="galeri.html">Galeri Karya</a>, dan
-                <a href="blog.html">Blog</a>.
-            </p>
 
             <p>
-                Tombol berikut dapat digunakan untuk kembali ke bagian
-                atas halaman atau menuju agenda belajar.
+
+                Saya ingin terus meningkatkan kemampuan
+                <span class="keyword">
+                    coding
+                </span>
+                saya.
+
             </p>
 
+        </section>
+
+
+        <!-- ================= SKILL ================= -->
+
+        <section class="card">
+
+            <h2>&#128187; Skill yang Dipelajari</h2>
+
+            <div class="skill-list">
+
+                <span class="skill">
+                    HTML
+                </span>
+
+                <span class="skill">
+                    CSS
+                </span>
+
+                <span class="skill">
+                    Web Design
+                </span>
+
+                <span class="skill">
+                    Coding
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECT ================= -->
+
+        <section class="card">
+
+            <h2>&#128640; Project yang Sedang Dipelajari</h2>
+
+            <div class="project-list">
+
+                <div class="project">
+
+                    <h3>&#127760; Website Portofolio</h3>
+
+                    <p>
+                        Membuat website pribadi untuk menampilkan
+                        profil dan karya.
+                    </p>
+
+                </div>
+
+
+                <div class="project">
+
+                    <h3>&#128196; HTML & CSS</h3>
+
+                    <p>
+                        Belajar membuat struktur dan tampilan
+                        halaman website.
+                    </p>
+
+                </div>
+
+
+                <div class="project">
+
+                    <h3>&#128187; Project PPLG</h3>
+
+                    <p>
+                        Mengerjakan berbagai latihan dan tugas
+                        pemrograman dari sekolah.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RINGKASAN MATERI ================= -->
+
+        <section class="card">
+
+            <h2>&#128218; Ringkasan Materi</h2>
+
             <p>
-                <a href="#top">&#11014; Kembali ke Atas</a>
-                <a href="#info-kegiatan">&#128187; Ke Agenda Belajar</a>
+
+                Pada materi HTML, kita mempelajari berbagai tag
+                untuk membuat struktur sebuah halaman web.
+
             </p>
-        </div>
-    </div>
+
+
+            <p>
+
+                Salah satu materi yang dipelajari adalah penggunaan
+                elemen <code>&lt;img&gt;</code> untuk menampilkan
+                gambar pada halaman website.
+
+            </p>
+
+
+            <p>
+
+                <span class="highlight">
+                    HTML
+                </span>
+
+                digunakan untuk membuat struktur halaman,
+                sedangkan
+
+                <span class="badge">
+                    CSS
+                </span>
+
+                digunakan untuk mengatur tampilan agar halaman
+                menjadi lebih menarik dan rapi.
+
+            </p>
+
+        </section>
+
+
+        <!-- ================= JADWAL ================= -->
+
+        <section class="card">
+
+            <h2>&#128197; Jadwal Pelajaran XI PPLG 2</h2>
+
+            <div class="table-card">
+
+                <table class="schedule-table">
+
+                    <caption>
+                        Jadwal Pelajaran XI PPLG 2 -
+                        Semester Gasal 2026/2027
+                    </caption>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Hari</th>
+
+                            <th>Jam Ke</th>
+
+                            <th>Waktu</th>
+
+                            <th>Mata Pelajaran</th>
+
+                            <th>Guru</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <!-- SENIN -->
+
+                        <tr>
+
+                            <td rowspan="5">
+                                Senin
+                            </td>
+
+                            <td>
+                                1
+                            </td>
+
+                            <td>
+                                06.30 - 07.15
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    Upacara
+                                </span>
+                            </td>
+
+                            <td>
+                                Without teacher
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                2 - 5
+                            </td>
+
+                            <td>
+                                07.15 - 09.30
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    Rekayasa Perangkat Lunak
+                                </span>
+                            </td>
+
+                            <td>
+                                Eka Mutia Putri, S.Kom.
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td colspan="4" class="break">
+                                &#9749; ISTIRAHAT
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                6 - 7
+                            </td>
+
+                            <td>
+                                10.35 - 12.05
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    Penjasorkes
+                                </span>
+                            </td>
+
+                            <td>
+                                Abdul Husen, S.Pd.
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                8 - 11
+                            </td>
+
+                            <td>
+                                12.35 - 15.15
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    B. Inggris / Bahasa Sunda
+                                </span>
+                            </td>
+
+                            <td>
+                                Ulfia Nur Agussetia, S.Pd.
+                                <br>
+                                Ade Gumelar, S.Pd.
+                            </td>
+
+                        </tr>
+
+
+                        <!-- SELASA -->
+
+                        <tr>
+
+                            <td rowspan="5">
+                                Selasa
+                            </td>
+
+                            <td>
+                                1 - 3
+                            </td>
+
+                            <td>
+                                06.30 - 08.45
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    PAIBP
+                                </span>
+                            </td>
+
+                            <td>
+                                Maman Lukmanul Hakim, S.Pd.
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                4 - 5
+                            </td>
+
+                            <td>
+                                08.45 - 10.35
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    Sejarah
+                                </span>
+                            </td>
+
+                            <td>
+                                Roni Purnama, S.Pd.
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td colspan="4" class="break">
+                                &#9749; ISTIRAHAT
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                6 - 7
+                            </td>
+
+                            <td>
+                                10.35 - 12.05
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    Rekayasa Perangkat Lunak
+                                </span>
+                            </td>
+
+                            <td>
+                                Candra Apriana, S.Pd.
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                8 - 10
+                            </td>
+
+                            <td>
+                                12.35 - 14.35
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    Rekayasa Perangkat Lunak
+                                </span>
+                            </td>
+
+                            <td>
+                                Nurul Rahmayani, S.Pd.
+                            </td>
+
+                        </tr>
+
+
+                        <!-- RABU -->
+
+                        <tr>
+
+                            <td rowspan="4">
+                                Rabu
+                            </td>
+
+                            <td>
+                                1 - 5
+                            </td>
+
+                            <td>
+                                06.30 - 09.10
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    KIK
+                                </span>
+                            </td>
+
+                            <td>
+                                Teguh Saputra, S.Pd.
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td colspan="4" class="break">
+                                &#9749; ISTIRAHAT
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                6 - 8
+                            </td>
+
+                            <td>
+                                10.10 - 12.10
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    Matematika
+                                </span>
+                            </td>
+
+                            <td>
+                                Euis Herawati, S.Pd.
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                9 - 11
+                            </td>
+
+                            <td>
+                                12.40 - 14.40
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    Rekayasa Perangkat Lunak
+                                </span>
+                            </td>
+
+                            <td>
+                                Esa Daniarsa, S.Kom.
+                            </td>
+
+                        </tr>
+
+
+                        <!-- KAMIS -->
+
+                        <tr>
+
+                            <td rowspan="4">
+                                Kamis
+                            </td>
+
+                            <td>
+                                1 - 2
+                            </td>
+
+                            <td>
+                                06.30 - 08.00
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    B. Inggris
+                                </span>
+                            </td>
+
+                            <td>
+                                Ulfia Nur Agussetia, S.Pd.
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                3 - 7
+                            </td>
+
+                            <td>
+                                08.00 - 12.05
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    Rekayasa Perangkat Lunak
+                                </span>
+                            </td>
+
+                            <td>
+                                Nurul Rahmayani, S.Pd.
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td colspan="4" class="break">
+                                &#9749; ISTIRAHAT
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                8 - 10
+                            </td>
+
+                            <td>
+                                12.35 - 14.35
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    Mapel Pilihan PPLG
+                                </span>
+                            </td>
+
+                            <td>
+                                Eka Mutia Putri, S.Kom.
+                            </td>
+
+                        </tr>
+
+
+                        <!-- JUMAT -->
+
+                        <tr>
+
+                            <td rowspan="4">
+                                Jumat
+                            </td>
+
+                            <td>
+                                1
+                            </td>
+
+                            <td>
+                                06.30 - 07.10
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    Pembinaan
+                                </span>
+                            </td>
+
+                            <td>
+                                Without teacher
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                2 - 4
+                            </td>
+
+                            <td>
+                                07.10 - 09.10
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    B. Inggris
+                                </span>
+                            </td>
+
+                            <td>
+                                Ulfia Nur Agussetia, S.Pd.
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td colspan="4" class="break">
+                                &#9749; ISTIRAHAT
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                5 - 7
+                            </td>
+
+                            <td>
+                                09.30 - 11.30
+                            </td>
+
+                            <td>
+                                <span class="subject">
+                                    Rekayasa Perangkat Lunak
+                                </span>
+                            </td>
+
+                            <td>
+                                Candra Apriana, S.Pd.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+
+                    <tfoot>
+
+                        <tr>
+
+                            <td colspan="5">
+
+                                Wali Kelas XI PPLG 2:
+                                <strong>
+                                    EKA MUTIA PUTRI S.Kom
+                                </strong>
+
+                            </td>
+
+                        </tr>
+
+                    </tfoot>
+
+                </table>
+
+            </div>
+
+
+            <div class="schedule-note">
+
+                &#128161;
+                Jadwal dapat berubah sesuai dengan kegiatan
+                dan ketentuan sekolah.
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= VIDEO ================= -->
+
+        <section class="card">
+
+            <h2>
+                &#127909; Showcase Media & Dokumentasi Belajar
+            </h2>
+
+            <p>
+
+                Berikut adalah video sebagai media pembelajaran
+                dan dokumentasi multimedia pada portofolio saya.
+
+            </p>
+
+
+            <div class="video-box">
+
+                <video
+                    controls
+                    muted
+                    poster="https://vjs.zencdn.net/v/oceans.png">
+
+                    <source
+                        src="https://vjs.zencdn.net/v/oceans.mp4"
+                        type="video/mp4">
+
+                    Browser Anda tidak mendukung tag video HTML5.
+
+                </video>
+
+
+                <p>
+
+                    Video sebagai contoh penggunaan elemen
+                    <code>&lt;video&gt;</code> dalam HTML.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AUDIO ================= -->
+
+        <section class="card">
+
+            <h2>
+                &#127925; Media Audio & Suara Pembelajaran
+            </h2>
+
+            <p>
+
+                Berikut adalah pemutar audio sebagai tambahan
+                media pembelajaran pada website portofolio saya.
+
+            </p>
+
+
+            <div class="audio-box">
+
+                <audio controls>
+
+                    <source
+                        src="https://www.w3schools.com/html/horse.mp3"
+                        type="audio/mpeg">
+
+                    <source
+                        src="https://www.w3schools.com/html/horse.ogg"
+                        type="audio/ogg">
+
+                    Browser Anda tidak mendukung tag audio HTML5.
+
+                </audio>
+
+
+                <p>
+
+                    Audio ini merupakan contoh penggunaan elemen
+                    <code>&lt;audio&gt;</code> dalam HTML.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AGENDA ================= -->
+
+        <section class="card" id="info-kegiatan">
+
+            <h2>
+                &#128187; Agenda Belajar Lab
+            </h2>
+
+            <ol>
+
+                <li>
+                    Heading dan Paragraf
+                </li>
+
+                <li>
+                    HTML list dan link
+                </li>
+
+                <li>
+                    Style dan HEX Color
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- ================= PANDUAN ================= -->
+
+        <section class="card">
+
+            <h2>
+                &#128640; Panduan Pintasan dan Struktur Kode
+            </h2>
+
+
+            <div class="panduan">
+
+                <h3>
+                    &#9000; Pintasan Keyboard VS Code
+                </h3>
+
+
+                <p>
+
+                    Untuk membuka Command Palette:
+
+                    <kbd>CTRL</kbd>
+                    +
+                    <kbd>SHIFT</kbd>
+                    +
+                    <kbd>P</kbd>
+
+                </p>
+
+
+                <p>
+
+                    Untuk menyimpan dokumen:
+
+                    <kbd>CTRL</kbd>
+                    +
+                    <kbd>S</kbd>
+
+                </p>
+
+
+                <p>
+
+                    Untuk membuka file:
+
+                    <kbd>CTRL</kbd>
+                    +
+                    <kbd>P</kbd>
+
+                </p>
+
+
+                <h3>
+                    &#11088; Struktur Dasar HTML
+                </h3>
+
+
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Judul Halaman&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+                <h3>
+                    &#9989; Status Terminal
+                </h3>
+
+
+                <p>
+
+                    <samp>
+                        File berhasil disimpan
+                    </samp>
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LINK BAWAH ================= -->
+
+        <section class="card">
+
+            <h2>
+                &#128279; Navigasi Cepat
+            </h2>
+
+            <p>
+
+                Gunakan menu berikut untuk berpindah halaman:
+
+            </p>
+
+
+            <p>
+
+                <a
+                    href="profil.html"
+                    class="button-link">
+                    &#128100; Profil Siswa
+                </a>
+
+
+                <a
+                    href="galeri.html"
+                    class="button-link">
+                    &#128444; Galeri Karya
+                </a>
+
+
+                <a
+                    href="blog.html"
+                    class="button-link">
+                    &#128221; Blog
+                </a>
+
+            </p>
+
+
+            <p>
+
+                <a
+                    href="#info-kegiatan"
+                    class="button-link">
+                    &#128187; Ke Agenda Belajar
+                </a>
+
+
+                <a
+                    href="#top"
+                    class="button-link">
+                    &#11014; Kembali ke Atas
+                </a>
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            &#128187;
+            <strong>
+                Satria Putra Anugrah
+            </strong>
+        </p>
+
+        <p>
+            XI PPLG 2 - SMKN 4 Kuningan
+        </p>
+
+        <p>
+            &#169; 2026 Portofolio Satria Putra Anugrah
+        </p>
+
+        <p>
+
+            <a href="#top">
+                &#11014; Kembali ke Atas
+            </a>
+
+        </p>
+
+    </footer>
 
 </body>
+
 </html>

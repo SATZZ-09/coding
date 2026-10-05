@@ -17,43 +17,77 @@
         href="https://www.smkn4kuningan.sch.id/favicon-16x16.png">
 
     <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: #f1f5f9;
             color: #333;
             margin: 20px;
             font-family: Arial, sans-serif;
+            line-height: 1.6;
         }
 
         h1 {
             text-align: center;
             color: #006EF0;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #006EF0;
+        }
+
+        h3 {
+            color: #0b3c5d;
         }
 
         a {
-            color: #0b3c5d;
+            color: #006EF0;
             text-decoration: none;
         }
 
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* HEADER */
+        .header-profile {
+            text-align: center;
+            padding: 15px 10px;
+        }
+
+        .header-profile p {
+            margin-top: 0;
+            color: #555;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #d5dce3;
+        }
+
+        /* CARD */
         .card {
             background-color: white;
             padding: 20px;
             margin: 20px 0;
-            border-radius: 15px;
+            border-radius: 10px;
             border: 1px solid #ddd;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.10);
         }
 
-        .foto-profil {
-            width: 150px;
-            height: auto;
-            border-radius: 12px;
-        }
-
+        /* NAVIGASI */
         nav {
             text-align: center;
         }
@@ -61,42 +95,98 @@
         nav a {
             display: inline-block;
             margin: 5px;
-            padding: 10px 15px;
+            padding: 9px 14px;
             background-color: #006EF0;
             color: white;
-            border-radius: 8px;
+            border-radius: 7px;
             text-decoration: none;
-            transition: 0.2s ease;
-        }
 
-        nav a.active {
-            background-color: #006EF0;
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 0 0 2px #006EF0;
+            transition:
+                background-color 0.2s ease,
+                transform 0.2s ease;
         }
 
         nav a:hover {
             background-color: #005AC8;
             color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
         }
 
-        .video-profile,
-        .audio-profile {
+        nav a.active {
+            background-color: #005AC8;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* DATA DIRI */
+        .profil-data {
+            text-align: center;
+        }
+
+        .foto-profil {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            margin: 10px auto;
+        }
+
+        .data-list {
+            max-width: 600px;
+            margin: 15px auto;
+            text-align: left;
+        }
+
+        .data-item {
+            padding: 10px 12px;
+            margin: 8px 0;
+            background-color: #f8fafc;
+            border-left: 4px solid #006EF0;
+            border-radius: 5px;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .data-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* HOBI */
+        .hobi-list {
+            padding-left: 20px;
+        }
+
+        .hobi-list li {
+            margin: 8px 0;
+        }
+
+        /* AUDIO & VIDEO */
+        .audio-profile,
+        .video-profile {
             margin-top: 20px;
             padding: 15px;
             background-color: #f8fafc;
             border: 1px solid #ddd;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+            border-radius: 9px;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
-        .video-profile video {
-            display: block;
-            width: 100%;
-            max-width: 420px;
-            margin: auto;
-            border-radius: 8px;
+        .audio-profile:hover,
+        .video-profile:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        .audio-profile h3,
+        .video-profile h3 {
+            margin-top: 0;
         }
 
         .audio-profile audio {
@@ -106,11 +196,28 @@
             margin: 15px auto;
         }
 
-        .video-profile p,
-        .audio-profile p {
+        .video-profile video {
+            display: block;
+            width: 100%;
+            max-width: 420px;
+            margin: 15px auto;
+            border-radius: 7px;
+        }
+
+        .audio-profile p,
+        .video-profile p {
             text-align: center;
         }
 
+        /* TUJUAN BELAJAR */
+        .tujuan {
+            background-color: #f8fafc;
+            padding: 15px;
+            border-left: 4px solid #006EF0;
+            border-radius: 5px;
+        }
+
+        /* MAP */
         .map {
             width: 100%;
             height: 300px;
@@ -118,10 +225,28 @@
             border-radius: 8px;
         }
 
-        .footer {
-            text-align: right;
+        /* CONTACT */
+        .contact-list {
+            padding-left: 20px;
         }
 
+        .contact-list li {
+            margin: 10px 0;
+        }
+
+        .contact-link {
+            font-weight: bold;
+        }
+
+        /* LINK BAWAH */
+        .bottom-links {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .bottom-links a {
+            margin: 0 8px;
+        }
 
         img {
             max-width: 100%;
@@ -133,26 +258,28 @@
             max-width: 100%;
         }
 
-        .card {
-            max-width: 100%;
-        }
-
-        /* Navigasi */
-        nav {
-            max-width: 100%;
+        .footer {
+            background-color: #222;
+            color: white;
             text-align: center;
+            padding: 25px 15px;
+            margin-top: 30px;
         }
 
-        nav a {
-            display: inline-block;
+        .footer a {
+            color: white;
+            text-decoration: none;
         }
 
+        .footer a:hover {
+            text-decoration: underline;
+        }
 
+        /* RESPONSIVE TABLET */
         @media screen and (max-width: 768px) {
 
             body {
                 margin: 10px;
-                padding: 0;
             }
 
             h1 {
@@ -168,21 +295,16 @@
                 margin: 15px 0;
             }
 
-            nav {
-                text-align: center;
-            }
-
             nav a {
-                margin: 5px;
+                margin: 4px;
             }
 
-            img {
-                max-width: 100%;
-                height: auto;
+            .map {
+                height: 280px;
             }
         }
 
-        
+        /* RESPONSIVE HP */
         @media screen and (max-width: 480px) {
 
             body {
@@ -198,20 +320,37 @@
                 font-size: 20px;
             }
 
+            h3 {
+                font-size: 18px;
+            }
+
             .card {
                 padding: 12px;
-                border-radius: 10px;
+                margin: 12px 0;
+                border-radius: 8px;
             }
 
             nav a {
                 display: block;
                 margin: 6px 0;
+                width: 100%;
             }
 
-            img {
-                width: 100%;
-                max-width: 100%;
-                height: auto;
+            .foto-profil {
+                width: 130px;
+            }
+
+            .map {
+                height: 240px;
+            }
+
+            .bottom-links a {
+                display: block;
+                margin: 8px 0;
+            }
+
+            .footer {
+                font-size: 12px;
             }
         }
     </style>
@@ -220,56 +359,85 @@
 <body id="top">
 
     <!-- HEADER -->
-    <h1>PROFIL SISWA</h1>
+    <div class="header-profile">
+        <h1>PROFIL SISWA</h1>
+
+        <p>
+            <b>Satria Putra Anugrah</b> | XI PPLG 2
+        </p>
+    </div>
 
     <hr>
 
     <!-- NAVIGASI -->
     <div class="card">
+
         <h2>Menu Navigasi</h2>
 
         <nav>
-            <a href="beranda.html">Beranda</a>
-            <a href="profil.html" class="active">Profil Siswa</a>
-            <a href="galeri.html">Galeri Karya</a>
-            <a href="blog.html">Blog</a>
+            <a href="beranda.html">&#127968; Beranda</a>
+            <a href="profil.html" class="active">&#128100; Profil Siswa</a>
+            <a href="galeri.html">&#128247; Galeri Karya</a>
+            <a href="blog.html">&#128221; Blog</a>
         </nav>
+
     </div>
 
     <!-- DATA DIRI -->
     <div class="card">
-        <h2>Data Diri</h2>
 
-        <picture>
-            <source
-                media="(min-width: 600px)"
-                srcset="foto-profil.jpg">
+        <h2>&#128100; Data Diri</h2>
 
-            <img
-                src="foto-profil-kecil.jpg"
-                alt="Foto Profile"
-                class="foto-profil">
-        </picture>
+        <div class="profil-data">
 
-        <p>
-            <b>&#128100; Nama:</b> SATRIA PUTRA ANUGRAH
-            <br>
-            <b>&#128197; Kelas:</b> XI PPLG 2
-            <br>
-            <b>&#128203; Sekolah:</b> SMKN 4 KUNINGAN
-            <br>
-            <b>&#128204; Jurusan:</b> Pengembangan Perangkat Lunak dan Gim
-        </p>
+            <picture>
+                <source
+                    media="(min-width: 600px)"
+                    srcset="foto-profil.jpg">
+
+                <img
+                    src="foto-profil-kecil.jpg"
+                    alt="Foto Profil Satria Putra Anugrah"
+                    class="foto-profil">
+            </picture>
+
+        </div>
+
+        <div class="data-list">
+
+            <div class="data-item">
+                <b>&#128100; Nama:</b>
+                SATRIA PUTRA ANUGRAH
+            </div>
+
+            <div class="data-item">
+                <b>&#128197; Kelas:</b>
+                XI PPLG 2
+            </div>
+
+            <div class="data-item">
+                <b>&#127979; Sekolah:</b>
+                SMKN 4 KUNINGAN
+            </div>
+
+            <div class="data-item">
+                <b>&#128204; Jurusan:</b>
+                Pengembangan Perangkat Lunak dan Gim
+            </div>
+
+        </div>
+
     </div>
 
-    <!-- HOBI -->
+    <!-- HOBI DAN MINAT -->
     <div class="card">
-        <h3>Hobi dan Minat</h3>
 
-        <ul>
-            <li>&#128176; Belajar coding</li>
-            <li>&#128177; Membuat website</li>
-            <li>&#128178; Belajar teknologi</li>
+        <h2>&#127919; Hobi dan Minat</h2>
+
+        <ul class="hobi-list">
+            <li>&#128187; Belajar coding</li>
+            <li>&#127760; Membuat website</li>
+            <li>&#9881;&#65039; Belajar teknologi</li>
         </ul>
 
         <!-- AUDIO -->
@@ -316,10 +484,12 @@
             </p>
 
         </div>
+
     </div>
 
-    <!-- PROFIL -->
+    <!-- PROFIL SAYA -->
     <div class="card">
+
         <h2>&#128075; Profil Saya</h2>
 
         <p>
@@ -331,25 +501,46 @@
         </p>
 
         <p>
-            Saya sedang mempelajari pengolahan data dan pemrograman website.
-            <var>$totalNilai</var> menggunakan bahasa pemrograman
-            <code>PHP</code>.
+            Saya sedang mempelajari pengolahan data dan
+            pemrograman website. Saya juga sedang belajar
+            membuat website menggunakan HTML, CSS, dan
+            bahasa pemrograman <code>PHP</code>.
         </p>
+
+        <p>
+            Dalam belajar pemrograman, saya mencoba membuat
+            project sederhana agar kemampuan saya semakin
+            berkembang.
+        </p>
+
     </div>
 
     <!-- TUJUAN BELAJAR -->
     <div class="card">
-        <h3>&#11088; Tujuan Belajar</h3>
 
-        <p>
-            Saya ingin meningkatkan kemampuan di bidang
-            <i>pemrograman website</i> dan membuat project yang bermanfaat.
-        </p>
+        <h2>&#11088; Tujuan Belajar</h2>
+
+        <div class="tujuan">
+
+            <p>
+                Saya ingin meningkatkan kemampuan di bidang
+                <i>pemrograman website</i> dan membuat project
+                yang bermanfaat.
+            </p>
+
+            <p>
+                Saya juga ingin terus belajar teknologi baru
+                dan meningkatkan kemampuan saya sebagai siswa PPLG.
+            </p>
+
+        </div>
+
     </div>
 
     <!-- LOKASI SEKOLAH -->
     <div class="card">
-        <h3>&#128205; Lokasi Kampus Sekolah</h3>
+
+        <h2>&#128205; Lokasi Sekolah</h2>
 
         <p>
             Berikut adalah lokasi SMKN 4 Kuningan pada Google Maps.
@@ -365,45 +556,61 @@
             loading="lazy"
             title="Peta Lokasi SMKN 4 Kuningan">
         </iframe>
+
     </div>
 
     <!-- CONTACT -->
     <div class="card">
-        <h3>&#9742; Hubungi Saya</h3>
 
-        <ul>
+        <h2>&#9742; Hubungi Saya</h2>
+
+        <ul class="contact-list">
+
             <li>
-                Gmail Saya:
-                <a href="mailto:putraanugrahsatria735@gmail.com">
+                &#128231; Gmail:
+                <a
+                    class="contact-link"
+                    href="mailto:putraanugrahsatria735@gmail.com">
                     putraanugrahsatria735@gmail.com
                 </a>
             </li>
 
             <li>
-                No Saya:
-                <a href="tel:081224496252">
+                &#128222; No. Telepon:
+                <a
+                    class="contact-link"
+                    href="tel:081224496252">
                     081224496252
                 </a>
             </li>
+
         </ul>
+
     </div>
 
     <!-- LINK BAWAH -->
-    <p>
+    <div class="bottom-links">
+
         <a href="beranda.html">Beranda</a>
+        |
         <a href="galeri.html">Galeri Karya</a>
+        |
         <a href="blog.html">Blog</a>
-    </p>
+
+    </div>
 
     <hr>
 
     <!-- FOOTER -->
     <p class="footer">
+
         &copy; 2026 Dibuat oleh
         <b>SATRIA PUTRA ANUGRAH</b> -
         <b>KELAS XI PPLG 2</b> -
         <b>SMKN 4 KUNINGAN</b>
+
     </p>
 
 </body>
+
 </html>
