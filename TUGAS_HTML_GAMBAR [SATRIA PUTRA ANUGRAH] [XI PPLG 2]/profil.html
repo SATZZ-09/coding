@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,21 +24,42 @@
         }
 
         body {
-            background-color: #f1f5f9;
+            background-color: #eef3f8;
             color: #333;
-            margin: 20px;
+            margin: 0;
             font-family: Arial, sans-serif;
             line-height: 1.6;
         }
 
-        h1 {
+        /* HEADER */
+        .header-profile {
+            background-color: white;
             text-align: center;
+            padding: 30px 15px 25px;
+            border-bottom: 4px solid #006EF0;
+        }
+
+        .header-profile h1 {
             color: #006EF0;
-            margin-bottom: 5px;
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .header-profile p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+
+        /* KONTEN */
+        .content {
+            max-width: 1000px;
+            margin: auto;
+            padding: 10px 20px;
         }
 
         h2 {
             color: #006EF0;
+            margin-top: 0;
         }
 
         h3 {
@@ -53,38 +75,22 @@
             text-decoration: underline;
         }
 
-        /* HEADER */
-        .header-profile {
-            text-align: center;
-            padding: 15px 10px;
-        }
-
-        .header-profile p {
-            margin-top: 0;
-            color: #555;
-        }
-
-        hr {
-            border: 0;
-            border-top: 1px solid #d5dce3;
-        }
-
         /* CARD */
         .card {
             background-color: white;
-            padding: 20px;
+            padding: 22px;
             margin: 20px 0;
             border-radius: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid #dce2e8;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
+            transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
         .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.10);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.09);
         }
 
         /* NAVIGASI */
@@ -95,124 +101,124 @@
         nav a {
             display: inline-block;
             margin: 5px;
-            padding: 9px 14px;
+            padding: 9px 15px;
             background-color: #006EF0;
             color: white;
-            border-radius: 7px;
+            border-radius: 6px;
             text-decoration: none;
 
-            transition:
-                background-color 0.2s ease,
+            transition: background-color 0.2s ease,
                 transform 0.2s ease;
         }
 
         nav a:hover {
-            background-color: #005AC8;
+            background-color: #005ac8;
             color: white;
             text-decoration: none;
             transform: translateY(-2px);
         }
 
         nav a.active {
-            background-color: #005AC8;
-            color: white;
+            background-color: #004da8;
             font-weight: bold;
         }
 
         /* DATA DIRI */
         .profil-data {
             text-align: center;
+            margin-bottom: 20px;
         }
 
         .foto-profil {
-            width: 150px;
-            height: auto;
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
             border-radius: 10px;
-            border: 2px solid #ddd;
-            margin: 10px auto;
+            border: 4px solid #006EF0;
+            padding: 3px;
+            background-color: white;
         }
 
         .data-list {
-            max-width: 600px;
-            margin: 15px auto;
-            text-align: left;
+            max-width: 650px;
+            margin: 20px auto 0;
         }
 
         .data-item {
-            padding: 10px 12px;
-            margin: 8px 0;
-            background-color: #f8fafc;
+            padding: 12px 15px;
+            margin: 9px 0;
+            background-color: #f6f9fc;
             border-left: 4px solid #006EF0;
             border-radius: 5px;
 
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
+            transition: transform 0.2s ease,
+                background-color 0.2s ease;
         }
 
         .data-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+            transform: translateX(4px);
+            background-color: #edf5ff;
         }
 
         /* HOBI */
         .hobi-list {
             padding-left: 20px;
+            margin-bottom: 5px;
         }
 
         .hobi-list li {
-            margin: 8px 0;
+            margin: 9px 0;
         }
 
-        /* AUDIO & VIDEO */
-        .audio-profile,
-        .video-profile {
+        /* MEDIA */
+        .media-box {
             margin-top: 20px;
-            padding: 15px;
-            background-color: #f8fafc;
-            border: 1px solid #ddd;
-            border-radius: 9px;
-
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
+            padding: 18px;
+            background-color: #f7f9fb;
+            border: 1px solid #dce2e8;
+            border-radius: 8px;
         }
 
-        .audio-profile:hover,
-        .video-profile:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-        }
-
-        .audio-profile h3,
-        .video-profile h3 {
+        .media-box h3 {
             margin-top: 0;
         }
 
         .audio-profile audio {
             display: block;
             width: 100%;
-            max-width: 420px;
+            max-width: 500px;
             margin: 15px auto;
         }
 
         .video-profile video {
             display: block;
             width: 100%;
-            max-width: 420px;
+            max-width: 500px;
             margin: 15px auto;
             border-radius: 7px;
         }
 
-        .audio-profile p,
-        .video-profile p {
+        .media-box p {
             text-align: center;
+            color: #555;
+        }
+
+        /* PROFIL SAYA */
+        .profile-text {
+            background-color: #f7f9fb;
+            padding: 15px 18px;
+            border-left: 4px solid #006EF0;
+            border-radius: 5px;
+        }
+
+        .profile-text p {
+            margin: 10px 0;
         }
 
         /* TUJUAN BELAJAR */
         .tujuan {
-            background-color: #f8fafc;
-            padding: 15px;
+            background-color: #f7f9fb;
+            padding: 15px 18px;
             border-left: 4px solid #006EF0;
             border-radius: 5px;
         }
@@ -222,7 +228,7 @@
             width: 100%;
             height: 300px;
             border: 0;
-            border-radius: 8px;
+            border-radius: 7px;
         }
 
         /* CONTACT */
@@ -231,7 +237,7 @@
         }
 
         .contact-list li {
-            margin: 10px 0;
+            margin: 12px 0;
         }
 
         .contact-link {
@@ -248,16 +254,7 @@
             margin: 0 8px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        iframe,
-        video {
-            max-width: 100%;
-        }
-
+        /* FOOTER */
         .footer {
             background-color: #222;
             color: white;
@@ -266,28 +263,43 @@
             margin-top: 30px;
         }
 
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* RESPONSIVE TABLET */
+        /* RESPONSIVE */
         @media screen and (max-width: 768px) {
 
-            body {
-                margin: 10px;
+            .content {
+                padding: 10px 15px;
             }
 
-            h1 {
+            .header-profile h1 {
                 font-size: 28px;
             }
 
-            h2 {
-                font-size: 22px;
+            .card {
+                padding: 18px;
+            }
+
+            .foto-profil {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+
+            .content {
+                padding: 5px 10px;
+            }
+
+            .header-profile {
+                padding: 25px 10px 20px;
+            }
+
+            .header-profile h1 {
+                font-size: 24px;
+            }
+
+            body {
+                font-size: 14px;
             }
 
             .card {
@@ -296,48 +308,14 @@
             }
 
             nav a {
-                margin: 4px;
-            }
-
-            .map {
-                height: 280px;
-            }
-        }
-
-        /* RESPONSIVE HP */
-        @media screen and (max-width: 480px) {
-
-            body {
-                margin: 8px;
-                font-size: 14px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            h3 {
-                font-size: 18px;
-            }
-
-            .card {
-                padding: 12px;
-                margin: 12px 0;
-                border-radius: 8px;
-            }
-
-            nav a {
                 display: block;
-                margin: 6px 0;
                 width: 100%;
+                margin: 6px 0;
             }
 
             .foto-profil {
                 width: 130px;
+                height: 130px;
             }
 
             .map {
@@ -367,239 +345,254 @@
         </p>
     </div>
 
-    <hr>
+    <!-- KONTEN -->
+    <main class="content">
 
-    <!-- NAVIGASI -->
-    <div class="card">
+        <!-- NAVIGASI -->
+        <div class="card">
 
-        <h2>Menu Navigasi</h2>
+            <h2>Menu Navigasi</h2>
 
-        <nav>
-            <a href="beranda.html">&#127968; Beranda</a>
-            <a href="profil.html" class="active">&#128100; Profil Siswa</a>
-            <a href="galeri.html">&#128247; Galeri Karya</a>
-            <a href="blog.html">&#128221; Blog</a>
-        </nav>
-
-    </div>
-
-    <!-- DATA DIRI -->
-    <div class="card">
-
-        <h2>&#128100; Data Diri</h2>
-
-        <div class="profil-data">
-
-            <picture>
-                <source
-                    media="(min-width: 600px)"
-                    srcset="foto-profil.jpg">
-
-                <img
-                    src="foto-profil-kecil.jpg"
-                    alt="Foto Profil Satria Putra Anugrah"
-                    class="foto-profil">
-            </picture>
+            <nav>
+                <a href="beranda.html">&#127968; Beranda</a>
+                <a href="profil.html" class="active">&#128100; Profil Siswa</a>
+                <a href="galeri.html">&#128247; Galeri Karya</a>
+                <a href="blog.html">&#128221; Blog</a>
+            </nav>
 
         </div>
 
-        <div class="data-list">
 
-            <div class="data-item">
-                <b>&#128100; Nama:</b>
-                SATRIA PUTRA ANUGRAH
+        <!-- DATA DIRI -->
+        <div class="card">
+
+            <h2>&#128100; Data Diri</h2>
+
+            <div class="profil-data">
+
+                <picture>
+                    <source
+                        media="(min-width: 600px)"
+                        srcset="foto-profil.jpg">
+
+                    <img
+                        src="foto-profil-kecil.jpg"
+                        alt="Foto Profil Satria Putra Anugrah"
+                        class="foto-profil">
+                </picture>
+
             </div>
 
-            <div class="data-item">
-                <b>&#128197; Kelas:</b>
-                XI PPLG 2
+            <div class="data-list">
+
+                <div class="data-item">
+                    <b>&#128100; Nama:</b>
+                    SATRIA PUTRA ANUGRAH
+                </div>
+
+                <div class="data-item">
+                    <b>&#128197; Kelas:</b>
+                    XI PPLG 2
+                </div>
+
+                <div class="data-item">
+                    <b>&#127979; Sekolah:</b>
+                    SMKN 4 KUNINGAN
+                </div>
+
+                <div class="data-item">
+                    <b>&#128204; Jurusan:</b>
+                    Pengembangan Perangkat Lunak dan Gim
+                </div>
+
             </div>
 
-            <div class="data-item">
-                <b>&#127979; Sekolah:</b>
-                SMKN 4 KUNINGAN
+        </div>
+
+
+        <!-- HOBI DAN MINAT -->
+        <div class="card">
+
+            <h2>&#127919; Hobi dan Minat</h2>
+
+            <ul class="hobi-list">
+                <li>&#128187; Belajar coding</li>
+                <li>&#127760; Membuat website</li>
+                <li>&#9881;&#65039; Belajar teknologi</li>
+            </ul>
+
+
+            <!-- AUDIO -->
+            <div class="media-box audio-profile">
+
+                <h3>&#127925; Efek Suara Favorit</h3>
+
+                <audio controls>
+                    <source
+                        src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
+                        type="audio/mpeg">
+
+                    Browser Anda tidak mendukung tag audio HTML5.
+                </audio>
+
+                <p>
+                    Audio ini merupakan contoh penggunaan elemen
+                    <code>&lt;audio&gt;</code> pada halaman profile.
+                </p>
+
             </div>
 
-            <div class="data-item">
-                <b>&#128204; Jurusan:</b>
-                Pengembangan Perangkat Lunak dan Gim
+
+            <!-- VIDEO -->
+            <div class="media-box video-profile">
+
+                <h3>&#127909; Video Minat Teknologi</h3>
+
+                <video
+                    controls
+                    loop
+                    muted
+                    poster="https://www.w3schools.com/html/pic_trulli.jpg">
+
+                    <source
+                        src="https://www.w3schools.com/html/mov_bbb.mp4"
+                        type="video/mp4">
+
+                    Browser Anda tidak mendukung tag video HTML5.
+                </video>
+
+                <p>
+                    Video ini merupakan contoh penggunaan elemen
+                    <code>&lt;video&gt;</code> pada halaman profile.
+                </p>
+
             </div>
 
         </div>
 
-    </div>
 
-    <!-- HOBI DAN MINAT -->
-    <div class="card">
+        <!-- PROFIL SAYA -->
+        <div class="card">
 
-        <h2>&#127919; Hobi dan Minat</h2>
+            <h2>&#128075; Profil Saya</h2>
 
-        <ul class="hobi-list">
-            <li>&#128187; Belajar coding</li>
-            <li>&#127760; Membuat website</li>
-            <li>&#9881;&#65039; Belajar teknologi</li>
-        </ul>
+            <div class="profile-text">
 
-        <!-- AUDIO -->
-        <div class="audio-profile">
+                <p>
+                    <b>NAMA SAYA:</b> SATRIA PUTRA ANUGRAH
+                </p>
 
-            <h3>&#127925; Efek Suara Favorit</h3>
+                <p>
+                    <b>KELAS:</b> XI PPLG 2
+                </p>
 
-            <audio controls>
-                <source
-                    src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
-                    type="audio/mpeg">
+                <p>
+                    Saya sedang mempelajari pengolahan data dan
+                    pemrograman website. Saya juga sedang belajar
+                    membuat website menggunakan HTML, CSS, dan
+                    bahasa pemrograman <code>PHP</code>.
+                </p>
 
-                Browser Anda tidak mendukung tag audio HTML5.
-            </audio>
+                <p>
+                    Dalam belajar pemrograman, saya mencoba membuat
+                    project sederhana agar kemampuan saya semakin
+                    berkembang.
+                </p>
 
-            <p>
-                Audio ini merupakan contoh penggunaan elemen
-                <code>&lt;audio&gt;</code> pada halaman profile.
-            </p>
-
-        </div>
-
-        <!-- VIDEO -->
-        <div class="video-profile">
-
-            <h3>&#127909; Video Minat Teknologi</h3>
-
-            <video
-                controls
-                loop
-                muted
-                poster="https://www.w3schools.com/html/pic_trulli.jpg">
-
-                <source
-                    src="https://www.w3schools.com/html/mov_bbb.mp4"
-                    type="video/mp4">
-
-                Browser Anda tidak mendukung tag video HTML5.
-            </video>
-
-            <p>
-                Video ini merupakan contoh penggunaan elemen
-                <code>&lt;video&gt;</code> pada halaman profile.
-            </p>
+            </div>
 
         </div>
 
-    </div>
 
-    <!-- PROFIL SAYA -->
-    <div class="card">
+        <!-- TUJUAN BELAJAR -->
+        <div class="card">
 
-        <h2>&#128075; Profil Saya</h2>
+            <h2>&#11088; Tujuan Belajar</h2>
 
-        <p>
-            <b>NAMA SAYA:</b> SATRIA PUTRA ANUGRAH
-        </p>
+            <div class="tujuan">
 
-        <p>
-            <b>KELAS:</b> XI PPLG 2
-        </p>
+                <p>
+                    Saya ingin meningkatkan kemampuan di bidang
+                    <i>pemrograman website</i> dan membuat project
+                    yang bermanfaat.
+                </p>
 
-        <p>
-            Saya sedang mempelajari pengolahan data dan
-            pemrograman website. Saya juga sedang belajar
-            membuat website menggunakan HTML, CSS, dan
-            bahasa pemrograman <code>PHP</code>.
-        </p>
+                <p>
+                    Saya juga ingin terus belajar teknologi baru
+                    dan meningkatkan kemampuan saya sebagai siswa PPLG.
+                </p>
 
-        <p>
-            Dalam belajar pemrograman, saya mencoba membuat
-            project sederhana agar kemampuan saya semakin
-            berkembang.
-        </p>
-
-    </div>
-
-    <!-- TUJUAN BELAJAR -->
-    <div class="card">
-
-        <h2>&#11088; Tujuan Belajar</h2>
-
-        <div class="tujuan">
-
-            <p>
-                Saya ingin meningkatkan kemampuan di bidang
-                <i>pemrograman website</i> dan membuat project
-                yang bermanfaat.
-            </p>
-
-            <p>
-                Saya juga ingin terus belajar teknologi baru
-                dan meningkatkan kemampuan saya sebagai siswa PPLG.
-            </p>
+            </div>
 
         </div>
 
-    </div>
 
-    <!-- LOKASI SEKOLAH -->
-    <div class="card">
+        <!-- LOKASI SEKOLAH -->
+        <div class="card">
 
-        <h2>&#128205; Lokasi Sekolah</h2>
+            <h2>&#128205; Lokasi Sekolah</h2>
 
-        <p>
-            Berikut adalah lokasi SMKN 4 Kuningan pada Google Maps.
-        </p>
+            <p>
+                Berikut adalah lokasi SMKN 4 Kuningan pada Google Maps.
+            </p>
 
-        <iframe
-            class="map"
-            src="https://www.google.com/maps?q=SMKN+4+Kuningan&output=embed"
-            width="100%"
-            height="280"
-            style="border: 0; border-radius: 8px;"
-            allowfullscreen=""
-            loading="lazy"
-            title="Peta Lokasi SMKN 4 Kuningan">
-        </iframe>
+            <iframe
+                class="map"
+                src="https://www.google.com/maps?q=SMKN+4+Kuningan&output=embed"
+                width="100%"
+                height="280"
+                style="border: 0; border-radius: 8px;"
+                allowfullscreen=""
+                loading="lazy"
+                title="Peta Lokasi SMKN 4 Kuningan">
+            </iframe>
 
-    </div>
+        </div>
 
-    <!-- CONTACT -->
-    <div class="card">
 
-        <h2>&#9742; Hubungi Saya</h2>
+        <!-- CONTACT -->
+        <div class="card">
 
-        <ul class="contact-list">
+            <h2>&#9742; Hubungi Saya</h2>
 
-            <li>
-                &#128231; Gmail:
-                <a
-                    class="contact-link"
-                    href="mailto:putraanugrahsatria735@gmail.com">
-                    putraanugrahsatria735@gmail.com
-                </a>
-            </li>
+            <ul class="contact-list">
 
-            <li>
-                &#128222; No. Telepon:
-                <a
-                    class="contact-link"
-                    href="tel:081224496252">
-                    081224496252
-                </a>
-            </li>
+                <li>
+                    &#128231; Gmail:
+                    <a
+                        class="contact-link"
+                        href="mailto:putraanugrahsatria735@gmail.com">
+                        putraanugrahsatria735@gmail.com
+                    </a>
+                </li>
 
-        </ul>
+                <li>
+                    &#128222; No. Telepon:
+                    <a
+                        class="contact-link"
+                        href="tel:081224496252">
+                        081224496252
+                    </a>
+                </li>
 
-    </div>
+            </ul>
 
-    <!-- LINK BAWAH -->
-    <div class="bottom-links">
+        </div>
 
-        <a href="beranda.html">Beranda</a>
-        |
-        <a href="galeri.html">Galeri Karya</a>
-        |
-        <a href="blog.html">Blog</a>
 
-    </div>
+        <!-- LINK BAWAH -->
+        <div class="bottom-links">
 
-    <hr>
+            <a href="beranda.html">Beranda</a>
+            |
+            <a href="galeri.html">Galeri Karya</a>
+            |
+            <a href="blog.html">Blog</a>
+
+        </div>
+
+    </main>
+
 
     <!-- FOOTER -->
     <p class="footer">

@@ -25,223 +25,277 @@
         }
 
         body {
-            background-color: #f1f5f9;
+            background-color: #eef3f8;
             color: #333;
-            margin: 20px;
+            margin: 0;
             font-family: Arial, sans-serif;
         }
 
-        h1 {
+        /* ================= HEADER ================= */
+
+        .header {
+            background-color: white;
+            padding: 30px 20px;
+            border-bottom: 4px solid #006EF0;
             text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
             color: #006EF0;
+            font-size: 34px;
+            letter-spacing: 1px;
         }
 
-        .card ul {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            padding: 0;
-            margin: 20px 0 0;
-            list-style: none;
-            flex-wrap: wrap;
+        .header p {
+            margin: 8px 0 0;
+            color: #666;
         }
 
-        .card ul li a {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #006EF0;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: 0.2s ease;
+        /* ================= ISI UTAMA ================= */
+
+        .content {
+            max-width: 1100px;
+            margin: 25px auto;
+            padding: 0 15px;
         }
 
-        .card ul li a.active {
-            background-color: #006EF0;
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 0 0 2px #006EF0;
-        }
-
-        .card ul li a:hover {
-            background-color: #005AC8;
-            color: white;
-            text-decoration: none;
-        }
-
-        a {
-            color: #0b3c5d;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #006EF0;
-            text-decoration: underline;
-        }
+        /* ================= CARD ================= */
 
         .card {
             background-color: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 15px;
-            border: 1px solid #ddd;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            border: 1px solid #d9e0e7;
 
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        .card h2 {
+            margin-top: 0;
+            color: #006EF0;
+            font-size: 21px;
         }
+
+        /* ================= NAVIGASI ================= */
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            padding: 0;
+            margin: 15px 0 0;
+
+            list-style: none;
+        }
+
+        .menu li a {
+            display: block;
+
+            padding: 10px 18px;
+
+            background-color: #006EF0;
+            color: white;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .menu li a:hover {
+            background-color: #0057bd;
+            transform: translateY(-2px);
+        }
+
+        .menu li a.active {
+            background-color: #003f8f;
+        }
+
+        /* ================= VIDEO ================= */
 
         .video-box {
             text-align: center;
         }
 
-        .video-box iframe {
-            display: block;
-            width: 100%;
-            max-width: 600px;
-            height: 340px;
-            margin: 15px auto;
-            border: 0;
-            border-radius: 8px;
+        .video-description {
+            color: #666;
+            margin-bottom: 20px;
         }
+
+        .video-frame {
+            background-color: #f5f7fa;
+            border: 1px solid #d8dee5;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .video-frame iframe {
+            display: block;
+
+            width: 100%;
+            height: 380px;
+
+            border: 0;
+            border-radius: 6px;
+        }
+
+        /* ================= PROYEKTOR ================= */
 
         .projector {
-            margin-top: 20px;
-        }
-
-        .projector a {
-            display: inline-block;
-            background-color: #e3f2fd;
-            padding: 10px 15px;
-            margin: 5px;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        .projector a:hover {
-            background-color: #bbdefb;
-            text-decoration: none;
-        }
-
-        .projector iframe {
-            display: block;
-            width: 100%;
-            max-width: 100%;
-            height: 320px;
-            margin-top: 15px;
-            border: 2px solid #bcb5e1;
-            border-radius: 8px;
-        }
-
-        .footer {
-            text-align: right;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .deskripsi-galeri {
             text-align: center;
         }
 
+        .projector-description {
+            color: #666;
+        }
+
+        .projector-buttons {
+            margin: 20px 0;
+        }
+
+        .projector-buttons a {
+            display: inline-block;
+
+            background-color: #e8f3ff;
+            color: #006EF0;
+
+            border: 1px solid #b9d9f7;
+            border-radius: 6px;
+
+            padding: 10px 18px;
+            margin: 5px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .projector-buttons a:hover {
+            background-color: #d5eaff;
+            transform: translateY(-2px);
+        }
+
+        .projector-screen {
+            background-color: #f5f5f5;
+
+            border: 8px solid #333;
+            border-radius: 8px;
+
+            padding: 5px;
+
+            margin-top: 15px;
+        }
+
+        .projector-screen iframe {
+            display: block;
+
+            width: 100%;
+            height: 350px;
+
+            border: 1px solid #ccc;
+            background-color: white;
+        }
+
+        /* ================= FOOTER ================= */
+
+        .footer {
+            max-width: 1100px;
+            margin: 30px auto 15px;
+            padding: 15px;
+
+            text-align: center;
+
+            color: #666;
+            font-size: 14px;
+
+            border-top: 1px solid #d2d8de;
+        }
+
+        /* ================= RESPONSIVE ================= */
 
         @media screen and (max-width: 768px) {
 
-            body {
-                margin: 10px;
-            }
-
-            .card {
-                padding: 15px;
-                margin: 15px 0;
-            }
-
-            h1 {
+            .header h1 {
                 font-size: 28px;
             }
 
-            .card ul {
-                gap: 8px;
-            }
-
-            .card ul li a {
-                margin: 2px;
-            }
-
-            .video-box iframe {
-                width: 100%;
-                max-width: 100%;
-                height: 250px;
-            }
-
-            .projector iframe {
-                width: 100%;
-                max-width: 100%;
-                height: 280px;
-            }
-
-            .footer {
-                text-align: center;
-            }
-
-        }
-
-
-        @media screen and (max-width: 480px) {
-
-            body {
-                margin: 8px;
-                font-size: 14px;
-            }
-
-            h1 {
-                font-size: 23px;
+            .content {
+                margin-top: 15px;
             }
 
             .card {
-                padding: 12px;
-                border-radius: 10px;
+                padding: 17px;
             }
 
-            .card ul {
+            .video-frame iframe {
+                height: 280px;
+            }
+
+            .projector-screen iframe {
+                height: 280px;
+            }
+        }
+
+        /* ================= HP ================= */
+
+        @media screen and (max-width: 480px) {
+
+            .header {
+                padding: 25px 15px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .content {
+                padding: 0 8px;
+            }
+
+            .card {
+                padding: 14px;
+                border-radius: 9px;
+            }
+
+            .menu {
                 flex-direction: column;
-                width: 100%;
             }
 
-            .card ul li {
-                width: 100%;
-            }
-
-            .card ul li a {
-                display: block;
+            .menu li,
+            .menu li a {
                 width: 100%;
                 text-align: center;
-                margin: 4px 0;
             }
 
-            .video-box iframe {
-                width: 100%;
-                max-width: 100%;
+            .video-frame iframe {
                 height: 210px;
             }
 
-            .projector iframe {
-                width: 100%;
-                max-width: 100%;
-                height: 230px;
-            }
-
-            .projector a {
+            .projector-buttons a {
                 display: block;
-                text-align: center;
-                margin: 6px 0;
+                margin: 8px 0;
             }
 
+            .projector-screen {
+                border-width: 5px;
+            }
+
+            .projector-screen iframe {
+                height: 220px;
+            }
+
+            .footer {
+                font-size: 12px;
+            }
         }
 
     </style>
@@ -249,118 +303,136 @@
 
 <body>
 
-    <!-- HEADER -->
-    <div class="card">
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
 
         <h1>GALERI KARYA</h1>
 
-        <p class="deskripsi-galeri">
+        <p>
             Galeri media dan hasil belajar
-            <b>Satria Putra Anugrah</b>.
+            <b>Satria Putra Anugrah</b>
         </p>
 
-    </div>
+    </header>
 
-    <!-- NAVIGASI -->
-    <div class="card">
 
-        <h2>Menu Navigasi</h2>
+    <main class="content">
 
-        <ul>
+        <!-- ================= NAVIGASI ================= -->
 
-            <li>
-                <a href="beranda.html">
-                    Beranda
+        <section class="card">
+
+            <h2>Menu Navigasi</h2>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="beranda.html">
+                        Beranda
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profil.html">
+                        Profil Siswa
+                    </a>
+                </li>
+
+                <li>
+                    <a href="galeri.html" class="active">
+                        Galeri Karya
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blog.html">
+                        Blog
+                    </a>
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- ================= VIDEO ================= -->
+
+        <section class="card video-box">
+
+            <h2>🎬 Video Teknologi dan Pemrograman</h2>
+
+            <p class="video-description">
+                Berikut video pembelajaran tentang
+                HTML, CSS, dan JavaScript.
+            </p>
+
+            <div class="video-frame">
+
+                <iframe
+                    src="https://www.youtube.com/embed/ok5xxc9LhPg"
+                    title="Tutorial HTML CSS dan JavaScript"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROYEKTOR ================= -->
+
+        <section class="card projector">
+
+            <h2>🖥️ Layar Demo Antar Halaman</h2>
+
+            <p class="projector-description">
+                Klik tombol di bawah untuk menampilkan
+                halaman di dalam layar proyektor.
+            </p>
+
+            <div class="projector-buttons">
+
+                <a
+                    href="beranda.html"
+                    target="proyektor-karya">
+                    🏠 Buka Beranda
                 </a>
-            </li>
 
-            <li>
-                <a href="profil.html">
-                    Profil Siswa
+                <a
+                    href="profil.html"
+                    target="proyektor-karya">
+                    👤 Buka Profil
                 </a>
-            </li>
 
-            <li>
-                <a href="galeri.html" class="active">
-                    Galeri Karya
-                </a>
-            </li>
+            </div>
 
-            <li>
-                <a href="blog.html">
-                    Blog
-                </a>
-            </li>
 
-        </ul>
+            <div class="projector-screen">
 
-    </div>
+                <iframe
+                    name="proyektor-karya"
+                    src="beranda.html"
+                    title="Layar Demo Antar Halaman">
+                </iframe>
 
-    <!-- VIDEO YOUTUBE -->
-    <div class="card video-box">
+            </div>
 
-        <h2>🎬 Video Teknologi dan Pemrograman</h2>
+        </section>
 
-        <p>
-            Berikut video pembelajaran tentang
-            HTML, CSS, dan JavaScript.
-        </p>
+    </main>
 
-        <iframe
-            src="https://www.youtube.com/embed/ok5xxc9LhPg"
-            title="Tutorial HTML CSS dan JavaScript"
-            allowfullscreen>
-        </iframe>
 
-    </div>
+    <!-- ================= FOOTER ================= -->
 
-    <!-- LAYAR PROYEKTOR MINI -->
-    <div class="card projector">
-
-        <h2>🖥️ Layar Demo Antar Halaman</h2>
-
-        <p>
-            Klik tombol di bawah untuk menampilkan
-            halaman di dalam layar proyektor.
-        </p>
-
-        <!-- LINK TARGET -->
-
-        <a
-            href="beranda.html"
-            target="proyektor-karya">
-            🏠 Buka Beranda
-        </a>
-
-        <a
-            href="profil.html"
-            target="proyektor-karya">
-            👤 Buka Profil
-        </a>
-
-        <!-- IFRAME -->
-
-        <iframe
-            name="proyektor-karya"
-            src="beranda.html"
-            title="Layar Demo Antar Halaman">
-        </iframe>
-
-    </div>
-
-    <!-- FOOTER -->
-
-    <hr>
-
-    <p class="footer">
+    <footer class="footer">
 
         &copy; 2026 Dibuat oleh
         <b>SATRIA PUTRA ANUGRAH</b> -
         <b>KELAS XI PPLG 2</b> -
         <b>SMKN 4 KUNINGAN</b>
 
-    </p>
+    </footer>
 
 </body>
-
 </html>
